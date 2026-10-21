@@ -27,15 +27,16 @@
   /* Geological / Institutional Accent */
   --color-forest: #2D6A4F;
 
-  /* Approved Typography Tokens */
-  --font-display: var(--font-display), "Instrument Serif", Georgia, serif;
-  --font-sans: var(--font-sans), "Inter", -apple-system, sans-serif;
+  /* Approved High-Readability Modern Typography Tokens */
+  --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-mono), "Space Mono", monospace;
 
-  /* MDE Beauty Typography Tokens */
-  --font-bourbon: "Bourbon St", var(--font-display), Georgia, serif;
-  --font-monument: "PP Monument Extended", var(--font-mono), sans-serif;
-  --font-futura: "Futura PT", "Futura PT Book", var(--font-sans), sans-serif;
+  /* Typography Aliases mapped to high-readability sans-serif */
+  --font-bourbon: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-monument: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-futura: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Lenval Properties Deep Espresso Luxury Palette */
   --color-lenval-base: #12100E;
@@ -49,64 +50,39 @@
   --color-lenval-gold: #C2A284;
 }
 
-/* MDE Beauty Font Faces */
-@font-face {
-  font-family: 'Bourbon St';
-  src: url('/fonts/BourbonSt-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PP Monument Extended';
-  src: url('/fonts/PPMonumentExtended-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url('/fonts/FuturaPT-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Futura PT Book';
-  src: url('/fonts/FuturaPT-Book.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Futura PT Light';
-  src: url('/fonts/FuturaPTLight.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 :root {
   --canvas-base: #F7F5F0;
   --ink-primary: #191B1F;
   --accent-oxide: #9A4A32;
   --accent-gold: #C2A284;
+
+  /* Centralized Typography Tokens */
+  --font-sans-main: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading-main: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono-main: var(--font-mono), "Space Mono", monospace;
+
+  --line-height-body: 1.625;
+  --line-height-heading: 1.15;
+  --line-height-subheading: 1.35;
+  --letter-spacing-body: 0.01em;
+  --letter-spacing-heading: -0.015em;
+  --letter-spacing-ui: 0.03em;
+  --letter-spacing-badge: 0.08em;
 }
 
 html.dark {
   --canvas-base: #12100E;
   --ink-primary: #FFFFFF;
+  --ink-secondary: #D4CDC5;
+  --ink-muted: #9E958C;
   color-scheme: dark;
 }
 
 html.light {
   --canvas-base: #F7F5F0;
   --ink-primary: #191B1F;
+  --ink-secondary: #334155;
+  --ink-muted: #64748B;
   color-scheme: light;
 }
 
@@ -114,7 +90,7 @@ html.light {
 html {
   background-color: var(--canvas-base);
   color: var(--ink-primary);
-  font-family: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans), "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -126,7 +102,19 @@ body {
   overflow-x: hidden;
   background-color: var(--canvas-base);
   color: var(--ink-primary);
+  font-family: var(--font-sans), "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p {
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: var(--line-height-heading);
 }
 
 /* Reduced Motion Override */
@@ -197,20 +185,34 @@ body {
   animation: mde-arrow-slide-out 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* MDE Font Utility Classes */
+/* High-Readability Modern Font Utility Classes */
 .font-bourbon {
-  font-family: 'Bourbon St', var(--font-display), Georgia, serif;
-  -webkit-font-feature-settings: 'ss01', 'liga';
-  font-feature-settings: 'ss01', 'liga';
+  font-family: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
 }
 
 .font-monument {
-  font-family: 'PP Monument Extended', var(--font-mono), sans-serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-heading), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 600;
 }
 
 .font-futura {
-  font-family: 'Futura PT', 'Futura PT Book', var(--font-sans), sans-serif;
+  font-family: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
+  letter-spacing: 0.01em;
 }
 
 /* MDE Luxury Marquee / Ticker Animation */
@@ -354,7 +356,7 @@ html.light [class*="text-[#94A3B8]"] {
 
 html.light [class*="text-[#8F857B]"],
 html.light [class*="text-[#64748B]"] {
-  color: #737882 !important;
+  color: #475569 !important;
 }
 
 html.light [class*="text-[#C2A284]"] {

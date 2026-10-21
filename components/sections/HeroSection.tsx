@@ -132,12 +132,12 @@ export const HeroSection: React.FC = () => {
 
         {/* Top Spacer */}
         <div className="relative z-10 pt-8 px-6 sm:px-10 lg:px-16 mx-auto w-full max-w-[1536px]">
-          <div className="flex items-center justify-between font-monument text-[10px] uppercase tracking-[0.22em] text-[#C5BCB3]">
+          <div className="flex items-center justify-between font-sans text-xs uppercase tracking-wider font-semibold text-[#D4CDC5]">
             <div className="flex items-center gap-2.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
               <span>PUNE &amp; MAHARASHTRA REGIONAL DEPLOYMENT</span>
             </div>
-            <div className="hidden sm:block text-[#8F857B]">
+            <div className="hidden sm:block text-[#C5BCB3] font-medium">
               COORDINATES: 18.5986&deg; N, 73.7978&deg; E
             </div>
           </div>
@@ -149,11 +149,31 @@ export const HeroSection: React.FC = () => {
             
             {/* Left Lower: Credential Summary & Action Triggers */}
             <div className="lg:col-span-5 flex flex-col gap-6">
+              <div className="flex items-center gap-3.5">
+                <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-2xl p-0.5">
+                  <div className="relative w-full h-full rounded-[9px] overflow-hidden bg-[#181512]">
+                    <Image
+                      src="/images/hero/logo.jpeg"
+                      alt="GJ Buildcon Official Insignia"
+                      fill
+                      sizes="(max-width: 640px) 48px, 56px"
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
+                </div>
+                <div>
+                  <span className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284] block">
+                    CIVIL EXECUTION &amp; ROTARY PILING
+                  </span>
+                  <span className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.12em] font-medium text-[#C5BCB3] block mt-0.5">
+                    CRAFTING LANDMARKS, CREATING LEGACIES
+                  </span>
+                </div>
+              </div>
+
               <div className="max-w-md">
-                <span className="font-monument text-[10px] uppercase tracking-[0.2em] text-[#C2A284] block mb-2">
-                  CIVIL EXECUTION &amp; ROTARY PILING
-                </span>
-                <p className="font-futura text-sm sm:text-base text-[#C5BCB3] leading-relaxed">
+                <p className="font-sans text-sm sm:text-base text-[#E2DDD5] leading-relaxed font-normal">
                   Turnkey multi-storey reinforced concrete construction and deep hydraulic rotary rock socketing into challenging Deccan basalt strata across Western Maharashtra.
                 </p>
               </div>
@@ -165,7 +185,7 @@ export const HeroSection: React.FC = () => {
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 350, damping: 25 }}
-                  className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-monument text-[10px] uppercase tracking-[0.16em] transition-all duration-300 shadow-sm group ${
+                  className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold transition-all duration-300 shadow-sm group ${
                     isLight
                       ? "border border-[#191B1F] bg-[#191B1F] hover:bg-transparent"
                       : "border border-[#FFFFFF] bg-[#FFFFFF] hover:bg-transparent"
@@ -174,7 +194,7 @@ export const HeroSection: React.FC = () => {
                   <span className={isLight ? "text-white group-hover:text-[#191B1F] transition-colors" : "text-[#12100E] group-hover:text-white transition-colors"}>
                     Explore Vision
                   </span>
-                  <ArrowDown className={`h-3 w-3 ${isLight ? "text-white group-hover:text-[#191B1F] transition-colors" : "text-[#12100E] group-hover:text-white transition-colors"}`} />
+                  <ArrowDown className={`h-3.5 w-3.5 ${isLight ? "text-white group-hover:text-[#191B1F] transition-colors" : "text-[#12100E] group-hover:text-white transition-colors"}`} />
                 </motion.a>
 
                 <MotionLink
@@ -182,7 +202,7 @@ export const HeroSection: React.FC = () => {
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 350, damping: 25 }}
-                  className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-monument text-[10px] uppercase tracking-[0.16em] backdrop-blur-sm transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold backdrop-blur-sm transition-all duration-300 ${
                     isLight
                       ? "border border-[#DCD7CD] bg-[#FFFFFF]/90 text-[#191B1F] hover:border-[#9E7D5C] hover:bg-[#ECE8E0]"
                       : "border border-[#2D2622] bg-[#181512]/80 text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#1F1B17]"
@@ -198,7 +218,7 @@ export const HeroSection: React.FC = () => {
               ref={headlineRef}
               className="lg:col-span-7 flex flex-col items-start lg:items-end text-left lg:text-right"
             >
-              <h1 className="font-bourbon text-4xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[88px] leading-[0.96] uppercase text-[#FFFFFF] tracking-normal font-normal">
+              <h1 className="font-bourbon text-4xl sm:text-6xl md:text-7xl lg:text-[68px] xl:text-[80px] leading-[1.08] uppercase text-[#FFFFFF] tracking-tight font-extrabold">
                 Creators of Refined<br />
                 Foundations &amp; Iconic<br />
                 Structures
@@ -214,7 +234,7 @@ export const HeroSection: React.FC = () => {
           >
             <a
               href="#thesis"
-              className="group flex flex-col items-center gap-2 font-monument text-[9px] uppercase tracking-[0.25em] text-[#8F857B] hover:text-[#FFFFFF] transition-colors"
+              className="group flex flex-col items-center gap-2 font-sans text-xs uppercase tracking-wider font-medium text-[#C5BCB3] hover:text-[#FFFFFF] transition-colors"
             >
               <span>Scroll to Explore</span>
               <div className="w-[1px] h-6 bg-[#2D2622] group-hover:bg-[#C2A284] transition-colors relative overflow-hidden">

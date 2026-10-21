@@ -132,22 +132,22 @@ export const MachineryBasaltSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#2D2622] pb-8"
         >
           <div>
-            <div className="font-monument text-[10px] uppercase tracking-[0.22em] text-[#C2A284] mb-3 flex items-center gap-2">
+            <div className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#C2A284] mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
               <span>Chapter 04 // Subterranean Basalt Machinery</span>
             </div>
-            <h2 className="font-bourbour text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.96] text-[#FFFFFF] font-bourbon">
+            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.12] sm:leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
               The Basalt Drilling Fleet
             </h2>
           </div>
-          <div className="font-monument text-[10px] text-[#8F857B] uppercase tracking-[0.2em]">
+          <div className="font-sans text-xs text-[#A89F95] uppercase tracking-[0.15em] font-medium">
             Drilling Equipment &amp; Fleet Capabilities · Rock Socketing Engineering
           </div>
         </div>
 
         {/* Lead Narrative */}
         <div ref={narrativeRef} className="max-w-3xl mb-12 lg:mb-16">
-          <p className="font-futura text-base sm:text-lg text-[#C5BCB3] leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed">
             Sub-surface rock socketing in Pune&apos;s dense Deccan basalt formation requires high-capacity hydraulic machinery. GJ Buildcon deploys a dedicated rotary drilling fleet—ensuring continuous deep foundation schedules from initial mobilization to final pile cut-off.
           </p>
         </div>
@@ -171,14 +171,14 @@ export const MachineryBasaltSection: React.FC = () => {
                 />
               </div>
               {/* Technical Caption */}
-              <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-4 py-2.5 flex items-center justify-between font-monument text-[9px] text-[#C5BCB3] uppercase tracking-wider z-10">
+              <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-4 py-2.5 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium z-10">
                 <span>Fig. 4.1 // Hydraulic Assembly &amp; Drive System</span>
-                <span className="text-[#8F857B]">ASSET LOG // PUNE FIELD FLEET</span>
+                <span className="text-[#A89F95]">ASSET LOG // PUNE FIELD FLEET</span>
               </div>
             </div>
 
             {/* Technical Sub-Caption */}
-            <div className="mt-4 pt-4 border-t border-[#2D2622] flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-monument text-[10px] text-[#8F857B]">
+            <div className="mt-4 pt-4 border-t border-[#2D2622] flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-sans text-xs text-[#A89F95] font-medium">
               <span>APPLICATION: CAST-IN-SITU BORED PILING</span>
               <span className="text-[#C2A284]">PUNE REGIONAL DEPLOYMENT</span>
             </div>
@@ -193,17 +193,17 @@ export const MachineryBasaltSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="border-b border-[#2D2622] pb-6 will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
-              <div className="flex items-center justify-between font-monument text-[10px] mb-2">
+              <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
                 <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 01 // ROTARY DRILLING</span>
-                <span className="text-[#8F857B]">ROTARY SPEC</span>
+                <span className="text-[#A89F95]">ROTARY SPEC</span>
               </div>
-              <h3 className="font-bourbon text-xl sm:text-2xl uppercase text-[#FFFFFF] mb-2">
+              <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
                 MAIT Hydraulic Rotary Rigs
               </h3>
-              <p className="font-futura text-xs sm:text-sm text-[#C5BCB3] leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
                 Track-mounted heavy hydraulic rotary drilling rigs engineered for deep bored cast-in-situ piles through fractured and solid basalt strata.
               </p>
-              <div className="mt-3 font-futura text-xs text-[#8F857B] uppercase">
+              <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
                 Strata: Solid Basalt Socketing · Heavy Operational Fleet
               </div>
             </motion.div>
@@ -214,17 +214,17 @@ export const MachineryBasaltSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="border-b border-[#2D2622] pb-6 will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
-              <div className="flex items-center justify-between font-monument text-[10px] mb-2">
+              <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
                 <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 02 // CRAWLER DRILLING</span>
-                <span className="text-[#8F857B]">CRAWLER SPEC</span>
+                <span className="text-[#A89F95]">CRAWLER SPEC</span>
               </div>
-              <h3 className="font-bourbon text-xl sm:text-2xl uppercase text-[#FFFFFF] mb-2">
+              <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
                 SANY Heavy Rotary Units
               </h3>
-              <p className="font-futura text-xs sm:text-sm text-[#C5BCB3] leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
                 High-torque crawler rotary rigs utilized for large-diameter bored foundation shafts and heavy vertical load-bearing columns.
               </p>
-              <div className="mt-3 font-futura text-xs text-[#8F857B] uppercase">
+              <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
                 Strata: Large-Diameter Piling · Continuous Drilling Cycles
               </div>
             </motion.div>
@@ -235,17 +235,17 @@ export const MachineryBasaltSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
-              <div className="flex items-center justify-between font-monument text-[10px] mb-2">
+              <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
                 <span className="text-[#C2A284] uppercase tracking-[0.18em]">SUPPORT 03 // SITE LOGISTICS</span>
-                <span className="text-[#8F857B]">RIGGING FLEET</span>
+                <span className="text-[#A89F95]">RIGGING FLEET</span>
               </div>
-              <h3 className="font-bourbon text-xl sm:text-2xl uppercase text-[#FFFFFF] mb-2">
+              <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
                 Hydra Cranes &amp; Auxiliary Units
               </h3>
-              <p className="font-futura text-xs sm:text-sm text-[#C5BCB3] leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
                 Mobile site cranes and auxiliary utility fleet managing heavy steel rebar cage placement, tremie pipe deployment, and concrete logistics.
               </p>
-              <div className="mt-3 font-futura text-xs text-[#8F857B] uppercase">
+              <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
                 Role: Rebar Cage Handling &amp; Tremie Concrete Pouring
               </div>
             </motion.div>

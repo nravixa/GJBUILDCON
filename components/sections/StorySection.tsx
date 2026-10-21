@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { companyData } from "@/data/company";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -152,22 +153,22 @@ export const StorySection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#2D2622] pb-8"
         >
           <div>
-            <div className="font-monument text-[10px] uppercase tracking-[0.22em] text-[#C2A284] mb-3 flex items-center gap-2">
+            <div className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#C2A284] mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
               <span>Chapter 06 // Corporate Heritage &amp; Leadership</span>
             </div>
-            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.96] text-[#FFFFFF]">
+            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.12] sm:leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
               The Discipline of Permanence
             </h2>
           </div>
-          <div className="font-monument text-[10px] text-[#8F857B] uppercase tracking-[0.2em]">
+          <div className="font-sans text-xs text-[#A89F95] uppercase tracking-[0.15em] font-medium">
             Leadership: {companyData.founderName} · Continuous Timeline Since 2008
           </div>
         </div>
 
         {/* Lead Editorial Narrative */}
         <div ref={narrativeRef} className="max-w-3xl mb-12 lg:mb-16">
-          <p className="font-futura text-base sm:text-lg text-[#C5BCB3] leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed">
             Engineering leadership is forged through continuous site execution. Founded on over a decade of hands-on structural engineering, GJ Buildcon represents a methodical evolution from multinational infrastructure management to an integrated civil and deep foundation contractor across Maharashtra.
           </p>
         </div>
@@ -186,24 +187,36 @@ export const StorySection: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-[#2D2622] mb-5">
-                  <span className="font-bourbon text-3xl font-normal tracking-tight text-[#FFFFFF] tabular-nums">
+                  <span className="font-bourbon text-3xl font-extrabold tracking-tight text-[#FFFFFF] tabular-nums">
                     {m.year}
                   </span>
-                  <span className="font-monument text-[9px] text-[#C2A284] uppercase tracking-[0.18em]">
+                  <span className="font-sans text-xs font-semibold text-[#C2A284] uppercase tracking-[0.18em]">
                     {m.stage}
                   </span>
                 </div>
 
-                <h3 className="font-bourbon text-xl uppercase leading-snug text-[#FFFFFF] mb-3 group-hover:text-[#C2A284] transition-colors">
+                {m.year === "2025" && (
+                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] mb-4 shadow-sm">
+                    <Image
+                      src="/images/hero/logo.jpeg"
+                      alt="GJ Buildcon Official Logo"
+                      fill
+                      sizes="44px"
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+
+                <h3 className="font-bourbon text-xl uppercase leading-snug text-[#FFFFFF] mb-3 group-hover:text-[#C2A284] transition-colors font-bold tracking-tight">
                   {m.title}
                 </h3>
 
-                <p className="font-futura text-xs sm:text-sm text-[#C5BCB3] leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
                   {m.description}
                 </p>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-[#2D2622] flex items-center justify-between font-monument text-[9px] uppercase tracking-wider text-[#8F857B]">
+              <div className="mt-8 pt-4 border-t border-[#2D2622] flex items-center justify-between font-sans text-xs uppercase tracking-wider text-[#A89F95] font-medium">
                 <span>FOCUS: {m.focus}</span>
                 <span className="text-[#C2A284]">MILESTONE</span>
               </div>
@@ -218,19 +231,30 @@ export const StorySection: React.FC = () => {
           transition={{ duration: 0.2 }}
           className="border border-[#2D2622] bg-[#181512] p-8 sm:p-10 rounded-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 will-change-transform"
         >
-          <div>
-            <div className="font-monument text-[10px] text-[#C2A284] uppercase tracking-[0.18em] mb-1 flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Founder &amp; Principal Contractor</span>
+          <div className="flex items-center gap-4 sm:gap-5">
+            <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-md">
+              <Image
+                src="/images/hero/logo.jpeg"
+                alt="GJ Buildcon Official Mark"
+                fill
+                sizes="(max-width: 640px) 48px, 56px"
+                className="object-contain"
+              />
             </div>
-            <div className="font-bourbon text-2xl uppercase text-[#FFFFFF]">
-              Mr. Umesh Gatkal
-            </div>
-            <div className="font-futura text-xs text-[#8F857B] mt-1">
-              10+ Years Dedicated Regional Construction Execution across Pune &amp; Maharashtra
+            <div>
+              <div className="font-sans text-xs font-semibold text-[#C2A284] uppercase tracking-[0.18em] mb-1 flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Founder &amp; Principal Contractor</span>
+              </div>
+              <div className="font-bourbon text-2xl uppercase leading-snug text-[#FFFFFF] font-bold tracking-tight">
+                Mr. Umesh Gatkal
+              </div>
+              <div className="font-sans text-xs text-[#A89F95] mt-1 font-medium">
+                10+ Years Dedicated Regional Construction Execution across Pune &amp; Maharashtra
+              </div>
             </div>
           </div>
-          <div className="font-futura text-xs text-[#C5BCB3] max-w-md">
+          <div className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed max-w-md">
             Direct executive oversight on every deep foundation rig deployment and major structural concrete pour across Western Maharashtra.
           </div>
         </motion.div>

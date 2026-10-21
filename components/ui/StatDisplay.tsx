@@ -27,7 +27,7 @@ export const StatDisplay: React.FC<StatDisplayProps> = ({
     >
       <div className="flex items-center justify-between mb-4">
         {index && (
-          <span className="font-mono text-[11px] tracking-widest text-[#64748B] group-hover:text-amber-400 transition-colors">
+          <span className="font-mono text-xs font-medium tracking-widest text-[#A89F95] group-hover:text-amber-400 transition-colors">
             {index}
           </span>
         )}
@@ -35,7 +35,7 @@ export const StatDisplay: React.FC<StatDisplayProps> = ({
       </div>
 
       <div className="flex items-baseline gap-2 mb-2">
-        <span className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F2F0E9] group-hover:text-white transition-colors">
+        <span className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#FFFFFF] group-hover:text-white transition-colors leading-tight">
           {value}
         </span>
         {suffix && (
@@ -46,11 +46,11 @@ export const StatDisplay: React.FC<StatDisplayProps> = ({
       </div>
 
       <div>
-        <h4 className="font-sans text-sm font-semibold tracking-wide text-[#F2F0E9]">
+        <h4 className="font-sans text-sm font-semibold tracking-wide text-[#FFFFFF]">
           {label}
         </h4>
         {sublabel && (
-          <p className="mt-1 font-sans text-xs text-[#94A3B8] leading-relaxed">
+          <p className="mt-1 font-sans text-xs text-[#E2DDD5] leading-relaxed">
             {sublabel}
           </p>
         )}

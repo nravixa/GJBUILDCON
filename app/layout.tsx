@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter, Space_Mono } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import "./globals.css";
 
-const sansFont = Inter({
+const headingFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-heading",
   display: "swap",
 });
 
-const displayFont = Instrument_Serif({
+const sansFont = Inter({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -59,10 +59,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/brand/logo.png", type: "image/png" },
+      { url: "/images/hero/logo.jpeg", type: "image/jpeg" },
     ],
     apple: [
-      { url: "/images/brand/logo.png", type: "image/png" },
+      { url: "/images/hero/logo.jpeg" },
+    ],
+    shortcut: [
+      { url: "/images/hero/logo.jpeg" },
     ],
   },
   openGraph: {
@@ -104,7 +107,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sansFont.variable} ${displayFont.variable} ${monoFont.variable}`}
+      className={`${headingFont.variable} ${sansFont.variable} ${monoFont.variable}`}
     >
       <head>
         <script

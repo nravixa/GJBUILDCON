@@ -20,7 +20,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
   return (
     <div className={`inline-flex items-center gap-2.5 ${className}`}>
       {showLabel && (
-        <span className="font-monument text-[9px] uppercase tracking-[0.16em] text-[#8F857B] select-none">
+        <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#C5BCB3] select-none">
           {isDark ? "Dark" : "Light"}
         </span>
       )}

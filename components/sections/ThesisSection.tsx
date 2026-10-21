@@ -80,15 +80,15 @@ export const ThesisSection: React.FC = () => {
         {/* Eyebrow Header */}
         <div ref={headerRef} className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-12 sm:pb-16 border-b border-[#2D2622]/80">
           <div>
-            <div className="font-monument text-[10px] uppercase tracking-[0.22em] text-[#C2A284] flex items-center gap-2">
+            <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284] flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
               <span>ABOUT GJ BUILDCON // OPERATIONAL STANCE</span>
             </div>
-            <h2 className="mt-3 font-bourbon text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight text-[#FFFFFF]">
+            <h2 className="mt-3 font-bourbon text-3xl sm:text-4xl lg:text-5xl uppercase leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
               The Engineering Thesis
             </h2>
           </div>
-          <div className="font-monument text-[10px] uppercase tracking-[0.2em] text-[#8F857B]">
+          <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
             WESTERN MAHARASHTRA • BEDROCK TO SKYLINE
           </div>
         </div>
@@ -101,10 +101,10 @@ export const ThesisSection: React.FC = () => {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-[#2D2622] bg-[#161311] group">
               
               {/* Technical Architectural Corner Crosshairs */}
-              <div className="absolute top-2 left-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
-              <div className="absolute top-2 right-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
-              <div className="absolute bottom-2 left-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
-              <div className="absolute bottom-2 right-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
+              <div className="absolute top-2 left-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
+              <div className="absolute top-2 right-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
+              <div className="absolute bottom-2 left-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
+              <div className="absolute bottom-2 right-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
 
               <Image
                 src="/images/capabilities/foundation-drilling-concept.webp"
@@ -118,10 +118,10 @@ export const ThesisSection: React.FC = () => {
 
               {/* Bottom Caption Pill */}
               <div className="absolute bottom-4 left-4 right-4 z-20 rounded border border-[#2D2622] bg-[#161311]/90 backdrop-blur-md p-3">
-                <div className="font-monument text-[9px] uppercase tracking-[0.18em] text-[#C2A284]">
+                <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284]">
                   GEOTECHNICAL RIGOR
                 </div>
-                <div className="mt-1 font-futura text-xs text-[#C5BCB3]">
+                <div className="mt-1 font-sans text-xs text-[#E2DDD5] leading-normal font-normal">
                   Heavy hydraulic rotary auguring into Deccan Basalt rock beds.
                 </div>
               </div>
@@ -130,37 +130,37 @@ export const ThesisSection: React.FC = () => {
 
           {/* Right Column: Lenval Monumental Manifesto & Narrative */}
           <div ref={narrativeRef} className="lg:col-span-7 flex flex-col justify-center">
-            <blockquote className="font-bourbon text-2xl sm:text-3xl lg:text-4xl leading-[1.18] text-[#FFFFFF] font-normal tracking-normal border-none p-0 m-0 uppercase">
+            <blockquote className="font-bourbon text-2xl sm:text-3xl lg:text-4xl leading-[1.25] text-[#FFFFFF] font-semibold tracking-normal border-none p-0 m-0 uppercase">
               &ldquo;For over a decade, GJ Buildcon has executed complex civil infrastructure and deep foundation piling across Maharashtra. We deliver structural durability from bedrock to skyline.&rdquo;
             </blockquote>
 
-            <p className="mt-8 font-futura text-base sm:text-lg text-[#C5BCB3] leading-relaxed">
+            <p className="mt-8 font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed font-normal">
               Founded by Mr. Umesh Gatkal, our engineering journey bridges subterranean geotechnical mastery with multi-story reinforced concrete delivery. By deploying specialized heavy hydraulic machinery and experienced engineering crews, we eliminate operational friction and protect project timelines.
             </p>
 
             {/* Editorial Metadata Badges */}
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-[#2D2622]">
               <div>
-                <span className="block font-monument text-[9px] uppercase tracking-[0.2em] text-[#8F857B]">
+                <span className="block font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
                   PRACTICE ESTABLISHED
                 </span>
-                <span className="mt-1 block font-bourbon text-xl text-[#FFFFFF]">
+                <span className="mt-1 block font-bourbon text-xl font-bold text-[#FFFFFF]">
                   2014
                 </span>
               </div>
               <div>
-                <span className="block font-monument text-[9px] uppercase tracking-[0.2em] text-[#8F857B]">
+                <span className="block font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
                   ANNUAL FOUNDATIONS
                 </span>
-                <span className="mt-1 block font-bourbon text-xl text-[#FFFFFF]">
+                <span className="mt-1 block font-bourbon text-xl font-bold text-[#FFFFFF]">
                   100+ SITES
                 </span>
               </div>
               <div className="col-span-2 sm:col-span-1">
-                <span className="block font-monument text-[9px] uppercase tracking-[0.2em] text-[#8F857B]">
+                <span className="block font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
                   PRIMARY STRATA
                 </span>
-                <span className="mt-1 block font-bourbon text-xl text-[#C2A284]">
+                <span className="mt-1 block font-bourbon text-xl font-bold text-[#C2A284]">
                   DECCAN BASALT
                 </span>
               </div>
@@ -170,7 +170,7 @@ export const ThesisSection: React.FC = () => {
             <div className="mt-10">
               <Link
                 href="/about"
-                className="group inline-flex items-center gap-3 font-monument text-[11px] uppercase tracking-[0.22em] text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
+                className="group inline-flex items-center gap-3 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
               >
                 <span className="relative">
                   LEARN MORE ABOUT OUR PRACTICE

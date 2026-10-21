@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, Phone, ArrowUpRight } from "lucide-react";
 import { primaryNavigation } from "@/data/navigation";
@@ -43,9 +44,13 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onCl
   }, [isOpen]);
 
   // Auto-close on route change
+  const prevPathname = useRef(pathname);
   useEffect(() => {
-    if (isOpen) onClose();
-  }, [pathname, isOpen, onClose]);
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      onClose();
+    }
+  }, [pathname, onClose]);
 
   if (!isOpen) return null;
 
@@ -69,21 +74,42 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onCl
         className="relative ml-auto flex h-full w-[90%] max-w-md flex-col justify-between border-l border-[#2D2622] bg-[#12100E] p-8 sm:p-10 shadow-2xl text-[#FFFFFF] animate-fadeIn"
       >
         <div>
-          {/* Header */}
+          {/* Header with Logo */}
           <div className="flex items-center justify-between border-b border-[#2D2622] pb-6">
-            <span className="font-monument text-xs tracking-[0.2em] uppercase text-[#C2A284]">
-              Menu Index
-            </span>
-            <div className="flex items-center gap-3">
-              <ThemeToggle showLabel />
+            <Link
+              href="/"
+              onClick={onClose}
+              className="flex items-center gap-3 focus-visible:outline-none group"
+              aria-label="GJ Buildcon Home"
+            >
+              <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-sm group-hover:border-[#C2A284] transition-colors">
+                <Image
+                  src="/images/hero/logo.jpeg"
+                  alt="GJ Buildcon Official Logo"
+                  fill
+                  sizes="44px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-bourbon text-sm tracking-[0.16em] uppercase text-[#FFFFFF] group-hover:text-[#C5BCB3] transition-colors font-bold">
+                  GJ BUILDCON
+                </span>
+                <span className="font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-[#C2A284] mt-0.5">
+                  Crafting Landmarks
+                </span>
+              </div>
+            </Link>
+            <div className="flex items-center gap-2.5">
+              <ThemeToggle showLabel={false} />
               <button
                 ref={closeButtonRef}
                 type="button"
                 onClick={onClose}
                 aria-label="Close mobile navigation menu"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2D2622] bg-[#181512] text-[#FFFFFF] hover:border-[#C2A284] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2D2622] bg-[#181512] text-[#FFFFFF] hover:border-[#C2A284] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284]"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
             </div>
           </div>
@@ -97,10 +123,10 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onCl
                   key={item.href}
                   href={item.href}
                   onClick={onClose}
-                  className={`group flex items-center justify-between py-3 border-b border-[#2D2622]/60 font-monument text-base sm:text-lg uppercase tracking-[0.08em] transition-colors ${
+                  className={`group flex items-center justify-between py-3 border-b border-[#2D2622]/60 font-sans text-base sm:text-lg uppercase tracking-[0.06em] font-semibold transition-colors ${
                     isActive
-                      ? "text-[#C2A284] font-semibold"
-                      : "text-[#C5BCB3] hover:text-[#FFFFFF]"
+                      ? "text-[#C2A284]"
+                      : "text-[#D4CDC5] hover:text-[#FFFFFF]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -117,7 +143,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onCl
           <Link
             href="/#enquiry"
             onClick={onClose}
-            className="flex items-center justify-center gap-2 rounded-full border border-[#2D2622] bg-[#181512] py-3.5 font-monument text-xs uppercase tracking-wider text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#1F1B17] transition-all"
+            className="flex items-center justify-center gap-2 rounded-full border border-[#2D2622] bg-[#181512] py-3.5 font-sans text-sm uppercase tracking-wider font-semibold text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#1F1B17] transition-all"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
             <span>Let&apos;s Talk</span>
@@ -125,13 +151,13 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onCl
 
           <a
             href={`tel:${companyData.phone}`}
-            className="flex items-center justify-center gap-2 rounded-full border border-[#2D2622] bg-transparent py-3.5 font-futura text-xs uppercase tracking-wider text-[#C5BCB3] hover:text-[#FFFFFF] hover:border-[#C5BCB3] transition-colors"
+            className="flex items-center justify-center gap-2 rounded-full border border-[#2D2622] bg-transparent py-3.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#D4CDC5] hover:text-[#FFFFFF] hover:border-[#C5BCB3] transition-colors"
           >
             <Phone className="h-3.5 w-3.5 text-[#C2A284]" />
             <span>Call: {companyData.phoneDisplay}</span>
           </a>
 
-          <div className="text-[10px] font-futura uppercase tracking-widest text-[#8F857B] text-center pt-2">
+          <div className="text-xs font-sans uppercase tracking-wider text-[#A89F95] text-center pt-2">
             PUNE, MAHARASHTRA // 18.5986&deg; N, 73.7978&deg; E
           </div>
         </div>

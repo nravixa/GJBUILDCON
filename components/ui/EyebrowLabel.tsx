@@ -23,7 +23,7 @@ export const EyebrowLabel: React.FC<EyebrowLabelProps> = ({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-[11px] font-medium tracking-wider uppercase backdrop-blur-sm",
+        "inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-xs font-semibold tracking-wider uppercase backdrop-blur-sm",
         variantMap[variant],
         className
       )}

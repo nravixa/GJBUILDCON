@@ -97,10 +97,10 @@ export default function CapabilitiesPage() {
                 <Link href="/" className="hover:text-amber-400 transition-colors">
                   Home
                 </Link>
-                <ChevronRight className="h-3 w-3 text-[#64748B]" />
+                <ChevronRight className="h-3 w-3 text-[#A89F95]" />
                 <span className="text-amber-400 font-semibold">Engineering Capabilities</span>
                 <span className="hidden sm:inline text-white/30">•</span>
-                <span className="hidden sm:inline text-[#64748B]">Operational Scale Footprint</span>
+                <span className="hidden sm:inline text-[#A89F95]">Operational Scale Footprint</span>
               </div>
 
               <div className="max-w-4xl">
@@ -108,11 +108,11 @@ export default function CapabilitiesPage() {
                   Dual-Pillar Contracting Architecture // Pune & Western Maharashtra
                 </EyebrowLabel>
 
-                <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F2F0E9] leading-[1.08]">
+                <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#FFFFFF] leading-[1.12] sm:leading-[1.15]">
                   Dual-Pillar Civil Construction &amp; Deep Foundation Engineering.
                 </h1>
 
-                <p className="mt-6 max-w-3xl font-sans text-base sm:text-lg text-[#CBD5E1] leading-relaxed">
+                <p className="mt-6 max-w-3xl font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed">
                   From Deccan volcanic basalt bedrock boring to multi-story reinforced concrete superstructures.
                   GJ Buildcon integrates heavy rotary piling and full-scope civil contracting under one unified,
                   disciplined command structure in Pune.
@@ -138,10 +138,10 @@ export default function CapabilitiesPage() {
 
                 {/* Top Badge: Honest Architectural Concept Disclosure */}
                 <div className="absolute top-4 left-4 sm:top-5 sm:left-5 flex flex-wrap items-center gap-2">
-                  <span className="rounded-full border border-white/20 bg-black/75 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-amber-400 backdrop-blur-md">
+                  <span className="rounded-full border border-white/20 bg-black/75 px-3 py-1 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold backdrop-blur-md">
                     SPECIFICATION // GEOTECHNICAL DRILLING DOSSIER
                   </span>
-                  <span className="hidden md:inline rounded-full border border-white/10 bg-black/60 px-3 py-1 font-mono text-[10px] text-slate-300 backdrop-blur-md">
+                  <span className="hidden md:inline rounded-full border border-white/10 bg-black/60 px-3 py-1 font-mono text-xs text-slate-200 backdrop-blur-md">
                     Subsurface Excavation &amp; Rotary Piling Study
                   </span>
                 </div>
@@ -149,10 +149,10 @@ export default function CapabilitiesPage() {
                 {/* Bottom Overlay Telemetry Data */}
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                   <div className="max-w-xl">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-teal-400 font-semibold block mb-1">
+                    <span className="font-mono text-xs uppercase tracking-widest text-teal-400 font-semibold block mb-1">
                       Integrated Subsurface Matrix
                     </span>
-                    <p className="font-sans text-xs sm:text-sm text-slate-200 backdrop-blur-sm bg-black/40 p-2.5 rounded-lg border border-white/10">
+                    <p className="font-sans text-xs sm:text-sm text-slate-100 backdrop-blur-sm bg-black/40 p-2.5 rounded-lg border border-white/10 leading-relaxed">
                       Coordinating deep hydraulic rotary borehole socketing with reinforced pile cap and superstructure casting,
                       eliminating typical handover delays between independent contractors.
                     </p>
@@ -160,11 +160,11 @@ export default function CapabilitiesPage() {
 
                   <div className="flex items-center gap-3 self-start sm:self-auto">
                     <div className="rounded-xl border border-white/10 bg-black/70 px-4 py-2 font-mono text-right backdrop-blur-md">
-                      <span className="block text-[10px] uppercase tracking-wider text-slate-400">Fleet Spec</span>
+                      <span className="block text-xs uppercase tracking-wider text-slate-300">Fleet Spec</span>
                       <span className="font-bold text-amber-400 text-sm">Hydraulic Rotary</span>
                     </div>
                     <div className="rounded-xl border border-white/10 bg-black/70 px-4 py-2 font-mono text-right backdrop-blur-md">
-                      <span className="block text-[10px] uppercase tracking-wider text-slate-400">Track Record</span>
+                      <span className="block text-xs uppercase tracking-wider text-slate-300">Track Record</span>
                       <span className="font-bold text-white text-sm">Multi-Category</span>
                     </div>
                   </div>
@@ -241,17 +241,17 @@ export default function CapabilitiesPage() {
                     <span className="font-mono text-xs uppercase tracking-wider text-red-400 font-bold">
                       Conventional Model
                     </span>
-                    <span className="font-mono text-[10px] text-[#64748B]">Bifurcated Tenders</span>
+                    <span className="font-mono text-xs text-[#A89F95] font-medium">Bifurcated Tenders</span>
                   </div>
                   <h3 className="font-display text-xl font-bold text-white mb-4">
                     Split Sub-Contractors &amp; Schedule Bottlenecks
                   </h3>
-                  <p className="font-sans text-sm text-[#94A3B8] leading-relaxed mb-6">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Separate piling vendors mobilize, drill, and vacate the site. The subsequent civil contractor
                     then disputes pile coordinates, cut-off tolerances, or excavation clearance, causing weeks of idle downtime.
                   </p>
 
-                  <ul className="space-y-3 font-sans text-xs text-[#CBD5E1]">
+                  <ul className="space-y-3 font-sans text-xs text-[#E2DDD5]">
                     <li className="flex items-start gap-2.5">
                       <span className="h-1.5 w-1.5 rounded-full bg-red-400 mt-1.5 flex-shrink-0" />
                       <span>Conflicting site staging, bentonite slurry clearing, and crane access disputes.</span>
@@ -268,7 +268,7 @@ export default function CapabilitiesPage() {
                 </div>
 
                 <div className="mt-8 pt-4 border-t border-white/5">
-                  <span className="font-mono text-[11px] text-red-400/80 uppercase tracking-wider">
+                  <span className="font-mono text-xs text-red-300 uppercase tracking-wider font-medium">
                     Result: Extended preliminary schedules &amp; unplanned developer cost overruns.
                   </span>
                 </div>
@@ -281,7 +281,7 @@ export default function CapabilitiesPage() {
                     <span className="font-mono text-xs uppercase tracking-wider text-teal-400 font-bold">
                       GJ Buildcon Unified Model
                     </span>
-                    <span className="rounded-full border border-teal-500/30 bg-teal-500/10 px-2.5 py-0.5 font-mono text-[10px] text-teal-300 font-semibold">
+                    <span className="rounded-full border border-teal-500/30 bg-teal-500/10 px-2.5 py-0.5 font-mono text-xs text-teal-300 font-semibold">
                       Single Accountable Contractor
                     </span>
                   </div>
@@ -289,7 +289,7 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-4">
                     Integrated Subsurface &amp; Superstructure Execution
                   </h3>
-                  <p className="font-sans text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     By operating both heavy rotary piling machinery and full-scale civil construction crews under
                     one engineering management team, GJ Buildcon turns foundation completion directly into pile cap
                     casting and column framework erection without missing a single casting day.
@@ -300,7 +300,7 @@ export default function CapabilitiesPage() {
                       <span className="font-mono text-xs text-amber-400 font-semibold block mb-1">
                         Pillar 01: Geotechnical Piling
                       </span>
-                      <p className="font-sans text-xs text-[#94A3B8] leading-normal">
+                      <p className="font-sans text-xs text-[#E2DDD5] leading-normal">
                         Bedrock borehole socketing, rebar cage hoisting via mobile Hydra cranes, and tremie concrete pouring.
                       </p>
                     </div>
@@ -309,7 +309,7 @@ export default function CapabilitiesPage() {
                       <span className="font-mono text-xs text-teal-400 font-semibold block mb-1">
                         Pillar 02: Civil Superstructure
                       </span>
-                      <p className="font-sans text-xs text-[#94A3B8] leading-normal">
+                      <p className="font-sans text-xs text-[#E2DDD5] leading-normal">
                         Direct pile-cap excavation, basement retaining, multi-level RCC framing, and turnkey finishing.
                       </p>
                     </div>
@@ -318,25 +318,25 @@ export default function CapabilitiesPage() {
 
                 {/* 4-Stage Continuum Strip */}
                 <div className="mt-8 pt-6 border-t border-white/10">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">
+                  <span className="font-mono text-xs uppercase tracking-widest text-slate-300 font-semibold block mb-3">
                     Unified Delivery Continuum
                   </span>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center font-mono text-[11px]">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center font-mono text-xs">
                     <div className="rounded-lg bg-black/40 border border-white/10 p-2">
                       <span className="text-amber-400 block font-bold">01 // BORE</span>
-                      <span className="text-slate-300 text-[10px]">Basalt Socketing</span>
+                      <span className="text-slate-200 text-xs">Basalt Socketing</span>
                     </div>
                     <div className="rounded-lg bg-black/40 border border-white/10 p-2">
                       <span className="text-amber-400 block font-bold">02 // CAST</span>
-                      <span className="text-slate-300 text-[10px]">Tremie Pouring</span>
+                      <span className="text-slate-200 text-xs">Tremie Pouring</span>
                     </div>
                     <div className="rounded-lg bg-black/40 border border-white/10 p-2">
                       <span className="text-teal-400 block font-bold">03 // TIE</span>
-                      <span className="text-slate-300 text-[10px]">Cap &amp; Plinth</span>
+                      <span className="text-slate-200 text-xs">Cap &amp; Plinth</span>
                     </div>
                     <div className="rounded-lg bg-black/40 border border-white/10 p-2">
                       <span className="text-teal-400 block font-bold">04 // ERECT</span>
-                      <span className="text-slate-300 text-[10px]">RCC Frame</span>
+                      <span className="text-slate-200 text-xs">RCC Frame</span>
                     </div>
                   </div>
                 </div>
@@ -418,14 +418,14 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
                     Residential Housing Societies &amp; Multi-Story Towers
                   </h3>
-                  <p className="font-sans text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Precision casting of high-density housing communities, gated residential enclaves, and multi-story
                     societies across Pune. We emphasize earthquake-resistant structural frameworks, durable external plastering,
                     and disciplined casting cycles that protect developer delivery commitments.
                   </p>
 
                   <div className="border-t border-white/10 pt-4">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#64748B] block mb-3">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#A89F95] font-semibold block mb-3">
                       Structural Protocols &amp; Execution Highlights
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans text-xs text-[#E2E8F0]">
@@ -463,7 +463,7 @@ export default function CapabilitiesPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center"
                   />
-                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-amber-400 backdrop-blur-sm border border-white/10">
+                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold backdrop-blur-sm border border-white/10">
                     CIVIL SPECIFICATION // COMMERCIAL FLOORPLATES
                   </div>
                 </div>
@@ -476,14 +476,14 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
                     Commercial Floorplates &amp; Corporate Parks
                   </h3>
-                  <p className="font-sans text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Engineered for high-volume foot traffic, heavy mechanical equipment loads, and flexible interior layouts.
                     Our commercial civil works incorporate large column grids, vertical service shafts, and rigid facade
                     mounting interfaces built to institutional building codes.
                   </p>
 
                   <div className="border-t border-white/10 pt-4">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#64748B] block mb-3">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#A89F95] font-semibold block mb-3">
                       Structural Protocols &amp; Execution Highlights
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans text-xs text-[#E2E8F0]">
@@ -521,7 +521,7 @@ export default function CapabilitiesPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center"
                   />
-                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-amber-400 backdrop-blur-sm border border-white/10">
+                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold backdrop-blur-sm border border-white/10">
                     CIVIL SPECIFICATION // CAMPUS &amp; CIVIC WORKS
                   </div>
                 </div>
@@ -534,7 +534,7 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
                     Educational Campuses &amp; Healthcare Facilities
                   </h3>
-                  <p className="font-sans text-sm text-[#CBD5E1] leading-relaxed mb-4">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-4">
                     Specialized civil engineering requiring heightened compliance: medical gas shafting and vibration
                     attenuation for diagnostic imaging wings, along with high-durability school buildings built for student
                     safety and high pedestrian traffic.
@@ -544,7 +544,7 @@ export default function CapabilitiesPage() {
                   </p>
 
                   <div className="border-t border-white/10 pt-4">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#64748B] block mb-3">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#A89F95] font-semibold block mb-3">
                       Structural Protocols &amp; Execution Highlights
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans text-xs text-[#E2E8F0]">
@@ -582,7 +582,7 @@ export default function CapabilitiesPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center"
                   />
-                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-amber-400 backdrop-blur-sm border border-white/10">
+                  <div className="absolute top-3 left-3 rounded-md bg-black/75 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold backdrop-blur-sm border border-white/10">
                     CIVIL SPECIFICATION // UTILITY TRENCHES &amp; SHORING
                   </div>
                 </div>
@@ -595,14 +595,14 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
                     Infrastructure Utilities &amp; Structural Retaining Works
                   </h3>
-                  <p className="font-sans text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Essential civic infrastructure executed with structural resilience: massive reinforced retaining walls
                     withstanding lateral earth pressures, stormwater culvert systems, subterranean utility trenches,
                     and internal high-load concrete transit roads built to industrial specifications.
                   </p>
 
                   <div className="border-t border-white/10 pt-4">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#64748B] block mb-3">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#A89F95] font-semibold block mb-3">
                       Structural Protocols &amp; Execution Highlights
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans text-xs text-[#E2E8F0]">
@@ -671,16 +671,16 @@ export default function CapabilitiesPage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover object-center"
                     />
-                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-amber-400 border border-white/10">
+                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold border border-white/10">
                       PILING SPECIFICATION // DEEP BASALT SOCKETING
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">
+                    <span className="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
                       Discipline 01 // Heavy Rig
                     </span>
-                    <span className="rounded-full bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 font-mono text-[9px] text-amber-300">
+                    <span className="rounded-full bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 font-mono text-xs font-semibold text-amber-300">
                       Hard Basalt
                     </span>
                   </div>
@@ -688,36 +688,36 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-xl font-bold text-white mb-2">
                     Augur Rotary Piling (Large-Diameter CFA / Bored)
                   </h3>
-                  <p className="font-mono text-xs text-[#94A3B8] mb-4">
+                  <p className="font-mono text-xs text-[#C5BCB3] mb-4">
                     High-capacity foundation drilling into Deccan volcanic bedrock
                   </p>
-                  <p className="font-sans text-xs sm:text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Utilizing heavy hydraulic rotary rigs equipped with Kelly bars and specialized auger bits to penetrate
                     through dense basalt strata. Guarantees true bedrock anchoring for high-rise residential towers and heavy commercial podiums.
                   </p>
 
-                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#94A3B8]">
+                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#C5BCB3]">
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Primary Strata:</span>
+                      <span className="text-slate-300">Primary Strata:</span>
                       <span className="text-white font-semibold">Hard Deccan Basalt</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Key Machine:</span>
+                      <span className="text-slate-300">Key Machine:</span>
                       <span className="text-amber-400 font-semibold">Hydraulic Rotary Rigs</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Vibration Risk:</span>
+                      <span className="text-slate-300">Vibration Risk:</span>
                       <span className="text-white">Minimal / Rotary Cut</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Application:</span>
+                      <span className="text-slate-300">Application:</span>
                       <span className="text-white">High-Rise Columns</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/5">
-                  <span className="font-mono text-[10px] text-amber-400/80 uppercase tracking-wider block">
+                  <span className="font-mono text-xs text-amber-300 uppercase tracking-wider font-medium block">
                     Zero speculative torque claims — verified rotary boring
                   </span>
                 </div>
@@ -737,16 +737,16 @@ export default function CapabilitiesPage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover object-center"
                     />
-                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-amber-400 border border-white/10">
+                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold border border-white/10">
                       PILING SPECIFICATION // BORED CAST-IN-SITU RIGGING
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">
+                    <span className="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
                       Discipline 02 // Urban Infill
                     </span>
-                    <span className="rounded-full bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 font-mono text-[9px] text-blue-300">
+                    <span className="rounded-full bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 font-mono text-xs font-semibold text-blue-300">
                       Constrained Sites
                     </span>
                   </div>
@@ -754,36 +754,36 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-xl font-bold text-white mb-2">
                     Tripod &amp; Bored Cast-In-Situ Piling
                   </h3>
-                  <p className="font-mono text-xs text-[#94A3B8] mb-4">
+                  <p className="font-mono text-xs text-[#C5BCB3] mb-4">
                     Proven foundation stabilization for narrow urban plots
                   </p>
-                  <p className="font-sans text-xs sm:text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Winch and drop-chisel tripod apparatus deployed with temporary casing and bentonite slurry circulation.
                     Ideal for tight city lanes and sensitive boundary plots where heavy crawler rigs cannot maneuver safely.
                   </p>
 
-                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#94A3B8]">
+                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#C5BCB3]">
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Primary Strata:</span>
+                      <span className="text-slate-300">Primary Strata:</span>
                       <span className="text-white font-semibold">Clay, Silt &amp; Murrum</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Access Width:</span>
+                      <span className="text-slate-300">Access Width:</span>
                       <span className="text-white font-semibold">Narrow City Approaches</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Concreting Method:</span>
+                      <span className="text-slate-300">Concreting Method:</span>
                       <span className="text-white">Bottom-Up Tremie Pipe</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Economic Profile:</span>
+                      <span className="text-slate-300">Economic Profile:</span>
                       <span className="text-amber-400">Cost-Effective Mobilization</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/5">
-                  <span className="font-mono text-[10px] text-amber-400/80 uppercase tracking-wider block">
+                  <span className="font-mono text-xs text-amber-300 uppercase tracking-wider font-medium block">
                     Tailored for medium-rise &amp; infill residential plots
                   </span>
                 </div>
@@ -803,16 +803,16 @@ export default function CapabilitiesPage() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover object-center"
                     />
-                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-amber-400 border border-white/10">
+                    <div className="absolute top-2.5 left-2.5 rounded-md bg-black/80 px-2 py-0.5 font-mono text-xs uppercase tracking-wider text-amber-400 font-semibold border border-white/10">
                       PILING SPECIFICATION // AGILE MOBILE INFILL UNITS
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">
+                    <span className="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
                       Discipline 03 // Rapid Mobile
                     </span>
-                    <span className="rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 font-mono text-[9px] text-emerald-300">
+                    <span className="rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 font-mono text-xs font-semibold text-emerald-300">
                       Fast Turnaround
                     </span>
                   </div>
@@ -820,36 +820,36 @@ export default function CapabilitiesPage() {
                   <h3 className="font-display text-xl font-bold text-white mb-2">
                     Tractor &amp; Mobile Piling Units
                   </h3>
-                  <p className="font-mono text-xs text-[#94A3B8] mb-4">
+                  <p className="font-mono text-xs text-[#C5BCB3] mb-4">
                     High-mobility foundation units for agile shoring &amp; retaining
                   </p>
-                  <p className="font-sans text-xs sm:text-sm text-[#CBD5E1] leading-relaxed mb-6">
+                  <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed mb-6">
                     Self-propelled mobile units configured for rapid site transit and fast setup.
                     Deployed primarily for perimeter shoring, retaining wall piles, plinth stabilization, and fast-track suburban projects.
                   </p>
 
-                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#94A3B8]">
+                  <div className="space-y-2 border-t border-white/10 pt-4 font-mono text-xs text-[#C5BCB3]">
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Mobility:</span>
+                      <span className="text-slate-300">Mobility:</span>
                       <span className="text-white font-semibold">Direct Road Travel</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Setup Time:</span>
+                      <span className="text-slate-300">Setup Time:</span>
                       <span className="text-emerald-400 font-semibold">Immediate / Under 2 Hrs</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Staging Area:</span>
+                      <span className="text-slate-300">Staging Area:</span>
                       <span className="text-white">Minimal Plot Clearance</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-400">Best Application:</span>
+                      <span className="text-slate-300">Best Application:</span>
                       <span className="text-white">Plinth Shoring &amp; Retention</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/5">
-                  <span className="font-mono text-[10px] text-amber-400/80 uppercase tracking-wider block">
+                  <span className="font-mono text-xs text-amber-300 uppercase tracking-wider font-medium block">
                     Zero heavy-hauler low-bed trailer requirements
                   </span>
                 </div>
@@ -1069,7 +1069,7 @@ export default function CapabilitiesPage() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
 
-                  <div className="mt-2 pt-3 border-t border-white/5 text-center font-mono text-[10px] text-slate-500">
+                  <div className="mt-2 pt-3 border-t border-white/5 text-center font-mono text-xs text-slate-300">
                     Headquarters: Flat No-3, B Wing, Ganga Park, Pimple Saudagar, Pune
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { companyData } from "@/data/company";
 import {
   Phone,
@@ -227,15 +228,15 @@ export const EnquiryTerminal: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#2D2622] pb-8"
         >
           <div>
-            <div className="font-monument text-[10px] uppercase tracking-[0.22em] text-[#C2A284] mb-3 flex items-center gap-2">
+            <div className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#C2A284] mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
               <span>Chapter 07 // Direct Consultation Terminal</span>
             </div>
-            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.96] text-[#FFFFFF]">
+            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.12] sm:leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
               Initiate Project Consultation
             </h2>
           </div>
-          <div className="font-monument text-[10px] text-[#8F857B] uppercase tracking-[0.2em]">
+          <div className="font-sans text-xs text-[#A89F95] uppercase tracking-[0.15em] font-medium">
             Turnkey Civil Tenders · Deep Foundation Piling Deployments
           </div>
         </div>
@@ -249,17 +250,33 @@ export const EnquiryTerminal: React.FC = () => {
           {/* Left Column: Direct Executive Channels (5 cols) */}
           <div className="lg:col-span-5 bg-[#161311] p-8 sm:p-12 flex flex-col justify-between space-y-8">
             <div>
-              <div className="font-monument text-[10px] text-[#C2A284] uppercase tracking-[0.18em] mb-2 pb-3 border-b border-[#2D2622] flex items-center justify-between">
+              <div className="font-sans text-xs font-semibold text-[#C2A284] uppercase tracking-[0.18em] mb-2 pb-3 border-b border-[#2D2622] flex items-center justify-between">
                 <span>DIRECT COMMUNICATION DESK</span>
-                <span className="flex items-center gap-1.5 text-emerald-400 font-monument text-[9px]">
+                <span className="flex items-center gap-1.5 text-emerald-400 font-sans text-[11px] font-semibold tracking-wider">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   AVAILABLE
                 </span>
               </div>
-              <h3 className="font-bourbon text-2xl sm:text-3xl uppercase text-[#FFFFFF] mb-3">
-                Executive Channels
-              </h3>
-              <p className="font-futura text-xs sm:text-sm text-[#C5BCB3] leading-relaxed mb-6">
+              <div className="flex items-center gap-3.5 mb-3">
+                <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#181512] shadow-sm">
+                  <Image
+                    src="/images/hero/logo.jpeg"
+                    alt="GJ Buildcon Official Insignia"
+                    fill
+                    sizes="48px"
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bourbon text-2xl sm:text-3xl uppercase text-[#FFFFFF] leading-tight font-bold tracking-tight">
+                    Executive Channels
+                  </h3>
+                  <span className="font-sans text-xs uppercase tracking-[0.15em] font-semibold text-[#C2A284] block mt-1">
+                    Direct Engineering Desk
+                  </span>
+                </div>
+              </div>
+              <p className="font-sans text-sm text-[#E2DDD5] leading-relaxed mb-6">
                 Connect directly with principal project engineers without intermediary call centers.
               </p>
 
@@ -278,13 +295,13 @@ export const EnquiryTerminal: React.FC = () => {
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="font-monument text-[9px] uppercase tracking-wider text-[#8F857B] block">
+                    <span className="font-sans text-xs uppercase tracking-wider text-[#A89F95] font-semibold block">
                       Direct Voice Line
                     </span>
                     <span className="font-mono text-sm font-bold text-[#FFFFFF] group-hover:text-[#C2A284] transition-colors">
                       {companyData.phoneDisplay}
                     </span>
-                    <span className="font-futura text-[11px] text-[#8F857B] block mt-0.5">
+                    <span className="font-sans text-xs text-[#A89F95] block mt-0.5">
                       Monday to Saturday · 09:00 AM – 07:00 PM IST
                     </span>
                   </div>
@@ -304,13 +321,13 @@ export const EnquiryTerminal: React.FC = () => {
                     <MessageSquare className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="font-monument text-[9px] uppercase tracking-wider text-[#8F857B] block">
+                    <span className="font-sans text-xs uppercase tracking-wider text-[#A89F95] font-semibold block">
                       WhatsApp Channel
                     </span>
                     <span className="font-mono text-sm font-bold text-[#FFFFFF] group-hover:text-emerald-400 transition-colors">
                       {companyData.phoneDisplay}
                     </span>
-                    <span className="font-futura text-[11px] text-[#8F857B] block mt-0.5">
+                    <span className="font-sans text-xs text-[#A89F95] block mt-0.5">
                       Rapid coordination for site drawings &amp; location coordinates
                     </span>
                   </div>
@@ -328,13 +345,13 @@ export const EnquiryTerminal: React.FC = () => {
                     <Mail className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="font-monument text-[9px] uppercase tracking-wider text-[#8F857B] block">
+                    <span className="font-sans text-xs uppercase tracking-wider text-[#A89F95] font-semibold block">
                       Tenders &amp; Corporate Inquiries
                     </span>
                     <span className="font-mono text-sm font-bold text-[#FFFFFF] group-hover:text-[#C2A284] transition-colors">
                       {companyData.email}
                     </span>
-                    <span className="font-futura text-[11px] text-[#8F857B] block mt-0.5">
+                    <span className="font-sans text-xs text-[#A89F95] block mt-0.5">
                       Tender documents, BOQs &amp; architectural drawings
                     </span>
                   </div>
@@ -350,10 +367,10 @@ export const EnquiryTerminal: React.FC = () => {
                     <MapPin className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="font-monument text-[9px] uppercase tracking-wider text-[#8F857B] block">
+                    <span className="font-sans text-xs uppercase tracking-wider text-[#A89F95] font-semibold block">
                       Corporate Headquarters
                     </span>
-                    <address className="font-futura text-xs text-[#C5BCB3] not-italic leading-relaxed mt-1">
+                    <address className="font-sans text-xs sm:text-sm text-[#E2DDD5] not-italic leading-relaxed mt-1">
                       {companyData.address.line1}, {companyData.address.line2},<br />
                       {companyData.address.locality}, {companyData.address.city} {companyData.address.pincode},<br />
                       {companyData.address.state}, India
@@ -364,7 +381,7 @@ export const EnquiryTerminal: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#2D2622] font-monument text-[10px] text-[#8F857B] uppercase tracking-wider">
+            <div className="pt-4 border-t border-[#2D2622] font-sans text-xs text-[#A89F95] uppercase tracking-wider font-medium">
               Verified Contact Footprint · Headquartered in Pune
             </div>
           </div>
@@ -373,10 +390,10 @@ export const EnquiryTerminal: React.FC = () => {
           <div className="lg:col-span-7 bg-[#181512] p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-3 border-b border-[#2D2622] mb-6">
-                <span className="font-monument text-[10px] uppercase tracking-[0.2em] text-[#C2A284]">
+                <span className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#C2A284]">
                   SPECIFICATION FORM
                 </span>
-                <span className="font-monument text-[10px] text-[#8F857B] uppercase tracking-wider">
+                <span className="font-sans text-xs text-[#A89F95] uppercase tracking-wider font-medium">
                   DIRECT SUBMISSION
                 </span>
               </div>
@@ -391,15 +408,15 @@ export const EnquiryTerminal: React.FC = () => {
                     <CheckCircle2 className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bourbon text-xl uppercase text-[#FFFFFF]">
+                    <h4 className="font-bourbon text-xl uppercase text-[#FFFFFF] font-bold tracking-tight">
                       Consultation Request Transmitted
                     </h4>
-                    <p className="mt-2 font-futura text-xs sm:text-sm text-[#C5BCB3] max-w-md mx-auto leading-relaxed">
+                    <p className="mt-2 font-sans text-sm text-[#E2DDD5] max-w-md mx-auto leading-relaxed">
                       Thank you, <strong className="text-[#FFFFFF]">{confirmedDetails.name}</strong>. Your project specifications have been securely received by the GJ Buildcon engineering desk. A principal engineer will review your structural requirements and respond directly via your contact details.
                     </p>
                   </div>
 
-                  <div className="border border-[#2D2622] bg-[#161311] p-4 font-mono text-xs text-left text-[#C5BCB3] max-w-md mx-auto space-y-1">
+                  <div className="border border-[#2D2622] bg-[#161311] p-4 font-mono text-xs text-left text-[#E2DDD5] max-w-md mx-auto space-y-1">
                     <div><strong>Discipline:</strong> {confirmedDetails.vertical}</div>
                     <div><strong>Contact:</strong> {confirmedDetails.phone}</div>
                     {confirmedDetails.location && <div><strong>Location:</strong> {confirmedDetails.location}</div>}
@@ -410,7 +427,7 @@ export const EnquiryTerminal: React.FC = () => {
                     onClick={handleReset}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    className="inline-flex items-center gap-2 border border-[#FFFFFF] bg-[#FFFFFF] text-[#12100E] px-5 py-2.5 font-monument text-xs uppercase tracking-wider hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2A284]"
+                    className="inline-flex items-center gap-2 border border-[#FFFFFF] bg-[#FFFFFF] text-[#12100E] px-5 py-2.5 font-sans text-xs font-semibold uppercase tracking-wider hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2A284]"
                   >
                     <RotateCcw className="h-3.5 w-3.5" />
                     <span>Submit Another Specification</span>
@@ -451,7 +468,7 @@ export const EnquiryTerminal: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Full Name */}
                     <div>
-                      <label htmlFor="client-name" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                      <label htmlFor="client-name" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                         Full Name <span className="text-[#C2A284]" aria-hidden="true">*</span>
                       </label>
                       <input
@@ -468,7 +485,7 @@ export const EnquiryTerminal: React.FC = () => {
                         placeholder="e.g. Umesh Sharma"
                         aria-invalid={fieldErrors.name ? "true" : undefined}
                         aria-describedby={fieldErrors.name ? "client-name-error" : undefined}
-                        className={`w-full border bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
+                        className={`w-full border bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
                           fieldErrors.name
                             ? "border-rose-500 focus-visible:border-rose-500 focus-visible:ring-rose-500"
                             : "border-[#2D2622] focus-visible:border-[#C2A284] focus-visible:ring-[#C2A284]"
@@ -484,7 +501,7 @@ export const EnquiryTerminal: React.FC = () => {
 
                     {/* Phone Number */}
                     <div>
-                      <label htmlFor="client-phone" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                      <label htmlFor="client-phone" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                         Contact Phone / WhatsApp <span className="text-[#C2A284]" aria-hidden="true">*</span>
                       </label>
                       <input
@@ -501,7 +518,7 @@ export const EnquiryTerminal: React.FC = () => {
                         placeholder="+91 98765 43210"
                         aria-invalid={fieldErrors.phone ? "true" : undefined}
                         aria-describedby={fieldErrors.phone ? "client-phone-error" : undefined}
-                        className={`w-full border bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
+                        className={`w-full border bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
                           fieldErrors.phone
                             ? "border-rose-500 focus-visible:border-rose-500 focus-visible:ring-rose-500"
                             : "border-[#2D2622] focus-visible:border-[#C2A284] focus-visible:ring-[#C2A284]"
@@ -519,7 +536,7 @@ export const EnquiryTerminal: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Email */}
                     <div>
-                      <label htmlFor="client-email" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                      <label htmlFor="client-email" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                         Email Address (Optional)
                       </label>
                       <input
@@ -534,7 +551,7 @@ export const EnquiryTerminal: React.FC = () => {
                         placeholder="name@company.com"
                         aria-invalid={fieldErrors.email ? "true" : undefined}
                         aria-describedby={fieldErrors.email ? "client-email-error" : undefined}
-                        className={`w-full border bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
+                        className={`w-full border bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed ${
                           fieldErrors.email
                             ? "border-rose-500 focus-visible:border-rose-500 focus-visible:ring-rose-500"
                             : "border-[#2D2622] focus-visible:border-[#C2A284] focus-visible:ring-[#C2A284]"
@@ -550,7 +567,7 @@ export const EnquiryTerminal: React.FC = () => {
 
                     {/* Discipline of Interest */}
                     <div>
-                      <label htmlFor="project-vertical" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                      <label htmlFor="project-vertical" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                         Discipline of Interest
                       </label>
                       <select
@@ -558,7 +575,7 @@ export const EnquiryTerminal: React.FC = () => {
                         disabled={isSubmitting}
                         value={formData.vertical}
                         onChange={(e) => setFormData({ ...formData, vertical: e.target.value })}
-                        className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
                       >
                         <option value="Residential Civil Works" className="bg-[#12100E] text-[#FFFFFF]">Residential Civil Construction</option>
                         <option value="Commercial Complex" className="bg-[#12100E] text-[#FFFFFF]">Commercial &amp; Office Complex</option>
@@ -573,7 +590,7 @@ export const EnquiryTerminal: React.FC = () => {
 
                   {/* Location & Approximate Scope */}
                   <div>
-                    <label htmlFor="project-location" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                    <label htmlFor="project-location" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                       Site Location &amp; Approximate Scope (Optional)
                     </label>
                     <input
@@ -583,13 +600,13 @@ export const EnquiryTerminal: React.FC = () => {
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       placeholder="e.g. Pimple Saudagar / 1,50,000 Sq. Ft. RCC Frame"
-                      className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
                     />
                   </div>
 
                   {/* Scope Notes */}
                   <div>
-                    <label htmlFor="project-message" className="block font-monument text-[10px] uppercase text-[#C5BCB3] tracking-wider mb-1.5">
+                    <label htmlFor="project-message" className="block font-sans text-xs font-semibold uppercase text-[#E2DDD5] tracking-wider mb-1.5">
                       Project Details or Geotechnical Notes
                     </label>
                     <textarea
@@ -599,7 +616,7 @@ export const EnquiryTerminal: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Briefly describe your structural requirements, target timeline, or geotechnical soil conditions..."
-                      className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-futura text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors resize-none rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="w-full border border-[#2D2622] bg-[#12100E] px-4 py-3 font-sans text-sm text-[#FFFFFF] placeholder-[#8F857B] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] focus-visible:border-[#C2A284] transition-colors resize-none rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
                     />
                   </div>
 
@@ -612,7 +629,7 @@ export const EnquiryTerminal: React.FC = () => {
                       whileHover={{ scale: 1.015, y: -2 }}
                       whileTap={{ scale: 0.98 }}
                       transition={{ type: "spring", stiffness: 350, damping: 25 }}
-                      className="w-full inline-flex items-center justify-center gap-3 rounded-full border border-[#FFFFFF] bg-[#FFFFFF] text-[#12100E] py-4 px-8 font-monument text-xs uppercase tracking-[0.16em] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2A284] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-3 rounded-full border border-[#FFFFFF] bg-[#FFFFFF] text-[#12100E] py-4 px-8 font-sans text-sm font-semibold uppercase tracking-[0.12em] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C2A284] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
                     >
                       {isSubmitting ? (
                         <>
@@ -628,7 +645,7 @@ export const EnquiryTerminal: React.FC = () => {
                     </motion.button>
                   </div>
 
-                  <div className="text-center pt-2 font-mono text-[10px] text-[#8F857B]">
+                  <div className="text-center pt-2 font-mono text-xs text-[#A89F95]">
                     Direct Server Dispatch · Certified Civil &amp; Piling Engineering · Telephone Line: +91 91687 77272
                   </div>
                 </form>

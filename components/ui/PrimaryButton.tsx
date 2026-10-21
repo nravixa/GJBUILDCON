@@ -24,13 +24,13 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   ...props
 }) => {
   const sizeMap = {
-    sm: "px-5 py-2.5 text-[10px]",
-    md: "px-7 py-3.5 text-[11px]",
-    lg: "px-9 py-4 text-xs",
+    sm: "px-5 py-2.5 text-xs",
+    md: "px-6 py-3 text-[13px] sm:text-sm",
+    lg: "px-8 py-3.5 text-sm sm:text-base",
   };
 
   const baseClasses = cn(
-    "group inline-flex items-center justify-center gap-2.5 rounded-full font-monument uppercase tracking-wider transition-all duration-300",
+    "group inline-flex items-center justify-center gap-2.5 rounded-full font-sans font-semibold uppercase tracking-wider transition-all duration-300",
     "border border-[#191B1F] bg-[#191B1F] text-[#F7F5F0] hover:bg-transparent hover:text-[#191B1F]",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A4A32]",
     "disabled:pointer-events-none disabled:opacity-50",

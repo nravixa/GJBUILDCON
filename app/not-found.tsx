@@ -61,22 +61,22 @@ export default function NotFound() {
 
             {/* Header Telemetry */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#DCD7CD] pb-6 mb-8 sm:mb-12">
-              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#9A4A32]">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-[#9A4A32] font-semibold">
                 <Compass className="h-3.5 w-3.5" />
                 <span>ERROR // 404 STRUCTURAL VOID</span>
               </div>
-              <div className="font-mono text-xs text-[#5A5E66] uppercase tracking-wide">
+              <div className="font-mono text-xs text-[#475569] uppercase tracking-wide font-medium">
                 UNCHARTED BLUEPRINT COORDINATE
               </div>
             </div>
 
             {/* Main Error Monograph Statement */}
             <div className="max-w-3xl relative z-10">
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-[0.96] text-[#191B1F] mb-6">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-[1.12] sm:leading-[1.15] text-[#191B1F] mb-6 font-bold tracking-tight">
                 This Coordinate Lies Beyond the Grid
               </h1>
 
-              <p className="font-sans text-base sm:text-lg text-[#5A5E66] leading-relaxed mb-10 max-w-2xl">
+              <p className="font-sans text-base sm:text-lg text-[#334155] leading-relaxed mb-10 max-w-2xl">
                 The requested structural path does not exist within the current GJ Buildcon engineering registry. The specification may have been moved, re-indexed, or never established in this corridor.
               </p>
 
@@ -84,7 +84,7 @@ export default function NotFound() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 border-t border-[#DCD7CD]">
                 <Link
                   href="/"
-                  className="inline-flex items-center justify-center gap-2 border border-[#191B1F] bg-[#191B1F] text-[#F7F5F0] px-6 py-3.5 font-mono text-xs uppercase tracking-wider hover:bg-[#9A4A32] hover:border-[#9A4A32] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A4A32]"
+                  className="inline-flex items-center justify-center gap-2 border border-[#191B1F] bg-[#191B1F] text-[#F7F5F0] px-6 py-3.5 font-sans text-xs sm:text-sm font-semibold uppercase tracking-wider hover:bg-[#9A4A32] hover:border-[#9A4A32] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A4A32]"
                 >
                   <Home className="h-4 w-4" />
                   <span>Return to Operational Overview</span>
@@ -93,7 +93,7 @@ export default function NotFound() {
 
                 <Link
                   href="/capabilities"
-                  className="inline-flex items-center justify-center gap-2 border border-[#DCD7CD] bg-[#ECE8E0] text-[#191B1F] px-6 py-3.5 font-mono text-xs uppercase tracking-wider hover:border-[#191B1F] hover:bg-[#DCD7CD] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A4A32]"
+                  className="inline-flex items-center justify-center gap-2 border border-[#DCD7CD] bg-[#ECE8E0] text-[#191B1F] px-6 py-3.5 font-sans text-xs sm:text-sm font-semibold uppercase tracking-wider hover:border-[#191B1F] hover:bg-[#DCD7CD] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A4A32]"
                 >
                   <Layers className="h-4 w-4 text-[#9A4A32]" />
                   <span>Explore Engineering Capabilities</span>
@@ -103,11 +103,11 @@ export default function NotFound() {
             </div>
 
             {/* Bottom Datum Telemetry */}
-            <div className="mt-12 sm:mt-16 pt-6 border-t border-[#DCD7CD] flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs text-[#8A8F99]">
+            <div className="mt-12 sm:mt-16 pt-6 border-t border-[#DCD7CD] flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs text-[#475569]">
               <div>
                 REGISTRY: G AND J BUILDCON · PUNE METROPOLITAN REGION
               </div>
-              <div className="flex items-center gap-2 text-[#5A5E66]">
+              <div className="flex items-center gap-2 text-[#334155] font-medium">
                 <span className="h-2 w-2 rounded-full bg-[#2D6A4F]" />
                 <span>CORE SYSTEM OPERATIONAL · CIVIL & PILING SERVICES</span>
               </div>

@@ -109,15 +109,15 @@ export const DisciplinesDiptychSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#2D2622] pb-8"
         >
           <div>
-            <div className="font-monument text-[10px] uppercase tracking-[0.22em] text-[#C2A284] mb-3 flex items-center gap-2">
+            <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284] mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
               <span>Chapter 03 // Engineering Disciplines</span>
             </div>
-            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.96] text-[#FFFFFF]">
+            <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
               The Dual-Vertical Framework
             </h2>
           </div>
-          <div className="font-monument text-[10px] text-[#8F857B] uppercase tracking-[0.2em]">
+          <div className="font-sans text-xs text-[#C5BCB3] uppercase tracking-wider font-semibold">
             Superstructure Civil Execution · Subterranean Piling Engineering
           </div>
         </div>
@@ -132,16 +132,16 @@ export const DisciplinesDiptychSection: React.FC = () => {
           >
             <div>
               {/* Technical Indicator */}
-              <div className="flex items-center justify-between font-monument text-[10px] text-[#C2A284] uppercase tracking-[0.18em] mb-4 pb-3 border-b border-[#2D2622]">
+              <div className="flex items-center justify-between font-sans text-xs text-[#C2A284] uppercase tracking-wider font-semibold mb-4 pb-3 border-b border-[#2D2622]">
                 <span>01 // SUPERSTRUCTURE &amp; CIVIL EXECUTION</span>
-                <span className="text-[#8F857B]">ABOVE-GRADE</span>
+                <span className="text-[#C5BCB3]">ABOVE-GRADE</span>
               </div>
 
               {/* Title & Editorial Description */}
-              <h3 className="font-bourbon text-2xl sm:text-3xl lg:text-4xl uppercase leading-[1.05] text-[#FFFFFF] mb-4">
+              <h3 className="font-bourbon text-2xl sm:text-3xl lg:text-4xl uppercase leading-[1.18] text-[#FFFFFF] mb-4 font-bold tracking-tight">
                 Turnkey Civil Construction &amp; Infrastructure
               </h3>
-              <p className="font-futura text-sm sm:text-base text-[#C5BCB3] leading-relaxed mb-8">
+              <p className="font-sans text-sm sm:text-base text-[#E2DDD5] leading-relaxed mb-8 font-normal">
                 From high-density residential societies to expansive commercial floorplates and institutional healthcare facilities, GJ Buildcon delivers turnkey RCC structural frameworks. Backed by experienced on-site tradesmen and dedicated supervisory crews, projects progress with structural rigor from initial ground-breaking through structural completion.
               </p>
 
@@ -152,10 +152,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-3 border-b border-[#2D2622]/60 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Residential Societies &amp; Townships
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     RCC Structural Frames &amp; Masonry
                   </span>
                 </motion.div>
@@ -164,10 +164,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-3 border-b border-[#2D2622]/60 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Commercial Complexes &amp; Floorplates
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     Large-Span Column Layouts
                   </span>
                 </motion.div>
@@ -176,10 +176,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Institutional Campuses, Schools &amp; Hospitals
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     Civic Infrastructure
                   </span>
                 </motion.div>
@@ -189,8 +189,8 @@ export const DisciplinesDiptychSection: React.FC = () => {
             {/* Architectural Visual Container with Crosshairs */}
             <div className="mt-8 pt-6 border-t border-[#2D2622]">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-sm border border-[#2D2622] bg-[#12100E] group/img">
-                <div className="absolute top-2 left-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
-                <div className="absolute top-2 right-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
+                <div className="absolute top-2 left-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
+                <div className="absolute top-2 right-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
                 
                 <div ref={image1Ref} className="relative w-full h-[115%] -top-[7.5%] will-change-transform">
                   <Image
@@ -202,9 +202,9 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   />
                 </div>
                 {/* Architectural Caption Metadata */}
-                <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3.5 py-2 flex items-center justify-between font-monument text-[9px] text-[#C5BCB3] uppercase tracking-wider z-10">
+                <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3.5 py-2 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium z-10">
                   <span>Fig. 3.1 // RCC Framework Execution</span>
-                  <span className="text-[#8F857B]">SPECIFICATION // PUNE STRUCTURAL DOSSIER</span>
+                  <span className="text-[#C5BCB3]">SPECIFICATION // PUNE STRUCTURAL DOSSIER</span>
                 </div>
               </div>
 
@@ -212,7 +212,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
               <div className="mt-6 flex items-center justify-between">
                 <Link
                   href="/capabilities"
-                  className="group inline-flex items-center gap-2 font-monument text-[11px] uppercase tracking-[0.2em] text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
+                  className="group inline-flex items-center gap-2 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
                 >
                   <span className="relative">
                     Explore Civil Specifications
@@ -220,7 +220,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   </span>
                   <ArrowUpRight className="h-4 w-4 text-[#C2A284] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
-                <span className="font-monument text-[9px] text-[#8F857B] uppercase tracking-wider">
+                <span className="font-sans text-xs text-[#C5BCB3] uppercase tracking-wider font-medium">
                   MULTI-CATEGORY TRACK RECORD
                 </span>
               </div>
@@ -234,16 +234,16 @@ export const DisciplinesDiptychSection: React.FC = () => {
           >
             <div>
               {/* Technical Indicator */}
-              <div className="flex items-center justify-between font-monument text-[10px] text-[#C2A284] uppercase tracking-[0.18em] mb-4 pb-3 border-b border-[#2D2622]">
+              <div className="flex items-center justify-between font-sans text-xs text-[#C2A284] uppercase tracking-wider font-semibold mb-4 pb-3 border-b border-[#2D2622]">
                 <span>02 // SUBTERRANEAN &amp; GEOTECHNICAL</span>
-                <span className="text-[#8F857B]">BELOW-GRADE</span>
+                <span className="text-[#C5BCB3]">BELOW-GRADE</span>
               </div>
 
               {/* Title & Editorial Description */}
-              <h3 className="font-bourbon text-2xl sm:text-3xl lg:text-4xl uppercase leading-[1.05] text-[#FFFFFF] mb-4">
+              <h3 className="font-bourbon text-2xl sm:text-3xl lg:text-4xl uppercase leading-[1.18] text-[#FFFFFF] mb-4 font-bold tracking-tight">
                 Deep Foundation &amp; Piling Solutions
               </h3>
-              <p className="font-futura text-sm sm:text-base text-[#C5BCB3] leading-relaxed mb-8">
+              <p className="font-sans text-sm sm:text-base text-[#E2DDD5] leading-relaxed mb-8 font-normal">
                 Sub-surface stability dictates structural permanence. Deploying specialized heavy rotary drilling rigs and crawler equipment, we engineer cast-in-situ bored piles, auger piling, and mobile foundation solutions into challenging Deccan basalt strata across Maharashtra.
               </p>
 
@@ -254,10 +254,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-3 border-b border-[#2D2622]/60 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Heavy Rotary Augur Piling
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     Hard Deccan Basalt Socketing
                   </span>
                 </motion.div>
@@ -266,10 +266,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-3 border-b border-[#2D2622]/60 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Tractor-Mounted Piling Units
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     Constrained Site Accessibility
                   </span>
                 </motion.div>
@@ -278,10 +278,10 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 cursor-default"
                 >
-                  <span className="font-monument text-xs uppercase text-[#FFFFFF] tracking-wide">
+                  <span className="font-sans text-xs sm:text-[13px] uppercase text-[#FFFFFF] tracking-wider font-semibold">
                     Tripod &amp; Bored Cast-in-Situ Systems
                   </span>
-                  <span className="font-futura text-xs text-[#8F857B] uppercase">
+                  <span className="font-sans text-xs text-[#C5BCB3] uppercase font-medium">
                     Low-Vibration Urban Foundation
                   </span>
                 </motion.div>
@@ -291,8 +291,8 @@ export const DisciplinesDiptychSection: React.FC = () => {
             {/* Architectural Visual Container with Crosshairs */}
             <div className="mt-8 pt-6 border-t border-[#2D2622]">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-sm border border-[#2D2622] bg-[#12100E] group/img">
-                <div className="absolute top-2 left-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
-                <div className="absolute top-2 right-2 z-20 font-mono text-[10px] text-[#C2A284]/70 select-none">+</div>
+                <div className="absolute top-2 left-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
+                <div className="absolute top-2 right-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
 
                 <div ref={image2Ref} className="relative w-full h-[115%] -top-[7.5%] will-change-transform">
                   <Image
@@ -304,9 +304,9 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   />
                 </div>
                 {/* Architectural Caption Metadata */}
-                <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3.5 py-2 flex items-center justify-between font-monument text-[9px] text-[#C5BCB3] uppercase tracking-wider z-10">
+                <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3.5 py-2 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium z-10">
                   <span>Fig. 3.2 // Piling Operations &amp; Rigging</span>
-                  <span className="text-[#8F857B]">SPECIFICATION // BASALT DRILLING RIG</span>
+                  <span className="text-[#C5BCB3]">SPECIFICATION // BASALT DRILLING RIG</span>
                 </div>
               </div>
 
@@ -314,7 +314,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
               <div className="mt-6 flex items-center justify-between">
                 <Link
                   href="/capabilities"
-                  className="group inline-flex items-center gap-2 font-monument text-[11px] uppercase tracking-[0.2em] text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
+                  className="group inline-flex items-center gap-2 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
                 >
                   <span className="relative">
                     Explore Piling Fleet &amp; Methods
@@ -322,7 +322,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
                   </span>
                   <ArrowUpRight className="h-4 w-4 text-[#C2A284] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
-                <span className="font-monument text-[9px] text-[#8F857B] uppercase tracking-wider">
+                <span className="font-sans text-xs text-[#C5BCB3] uppercase tracking-wider font-medium">
                   HEAVY ROTARY PILING
                 </span>
               </div>

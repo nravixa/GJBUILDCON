@@ -19,12 +19,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
     >
       <div>
         <div className="flex items-center justify-between gap-2 mb-4">
-          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">
+          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs uppercase tracking-wider text-slate-200">
             {project.category}
           </span>
           <span
             className={cn(
-              "font-mono text-[10px] uppercase tracking-wider",
+              "font-mono text-xs font-semibold uppercase tracking-wider",
               project.status === "Completed"
                 ? "text-emerald-400"
                 : project.status === "Ongoing"
@@ -36,11 +36,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
           </span>
         </div>
 
-        <h3 className="font-display text-xl sm:text-2xl font-bold text-[#F2F0E9] group-hover:text-white transition-colors">
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-[#FFFFFF] group-hover:text-amber-400 transition-colors">
           {project.title}
         </h3>
 
-        <div className="mt-2 flex items-center gap-1.5 font-mono text-xs text-[#94A3B8]">
+        <div className="mt-2 flex items-center gap-1.5 font-sans text-xs text-[#C5BCB3]">
           <MapPin className="h-3.5 w-3.5 text-amber-400" />
           <span>{project.location}</span>
           {project.sqft && (
@@ -51,18 +51,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
           )}
         </div>
 
-        <p className="mt-4 font-sans text-sm text-[#94A3B8] leading-relaxed">
+        <p className="mt-4 font-sans text-sm text-[#E2DDD5] leading-relaxed">
           {project.summary}
         </p>
       </div>
 
       <div className="mt-6 flex items-center justify-between border-t border-white/5 pt-4">
         {project.client ? (
-          <span className="font-sans text-xs text-[#64748B]">
-            Client: <strong className="text-slate-300 font-medium">{project.client}</strong>
+          <span className="font-sans text-xs text-[#A89F95]">
+            Client: <strong className="text-slate-200 font-medium">{project.client}</strong>
           </span>
         ) : (
-          <span className="font-mono text-[10px] text-[#64748B] uppercase tracking-wider">
+          <span className="font-mono text-xs text-[#A89F95] uppercase tracking-wider">
             {project.isConceptDemo ? "Architectural Landmark Concept" : "Verified Project"}
           </span>
         )}

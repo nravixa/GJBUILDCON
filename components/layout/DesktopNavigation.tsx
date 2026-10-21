@@ -28,11 +28,11 @@ export const DesktopNavigation: React.FC = () => {
             key={item.href}
             href={item.href}
             className={cn(
-              "font-monument text-[10px] uppercase tracking-[0.2em] transition-colors duration-300 py-2 relative",
+              "font-sans text-xs sm:text-[13px] uppercase tracking-[0.12em] font-medium transition-colors duration-300 py-2 relative",
               "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284]",
               isActive
-                ? "text-[#FFFFFF] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#FFFFFF]"
-                : "text-[#C5BCB3] hover:text-[#FFFFFF]"
+                ? "text-[#FFFFFF] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#FFFFFF]"
+                : "text-[#D4CDC5] hover:text-[#FFFFFF]"
             )}
             aria-current={isActive ? "page" : undefined}
           >

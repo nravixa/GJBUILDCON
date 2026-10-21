@@ -23,7 +23,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ capability, className 
         <div className="flex items-center justify-between mb-4">
           <span
             className={cn(
-              "rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-wider",
+              "rounded-full border px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider",
               isPiling
                 ? "border-amber-500/20 bg-amber-500/10 text-amber-400"
                 : "border-teal-500/20 bg-teal-500/10 text-teal-400"
@@ -31,31 +31,31 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ capability, className 
           >
             {isPiling ? "Deep Foundations" : "Civil Construction"}
           </span>
-          <ArrowUpRight className="h-5 w-5 text-[#64748B] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-amber-400" />
+          <ArrowUpRight className="h-5 w-5 text-[#8F857B] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-amber-400" />
         </div>
 
-        <h3 className="font-display text-xl sm:text-2xl font-bold text-[#F2F0E9] group-hover:text-white transition-colors">
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-[#FFFFFF] group-hover:text-white transition-colors">
           {capability.title}
         </h3>
         <p className="mt-1 font-mono text-xs text-amber-400/90 tracking-wide">
           {capability.subtitle}
         </p>
 
-        <p className="mt-4 font-sans text-sm text-[#94A3B8] leading-relaxed">
+        <p className="mt-4 font-sans text-sm text-[#E2DDD5] leading-relaxed">
           {capability.description}
         </p>
       </div>
 
       {capability.specs && capability.specs.length > 0 && (
         <div className="mt-6 border-t border-white/5 pt-5">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#64748B]">
+          <span className="font-sans text-xs uppercase tracking-widest text-[#A89F95] font-semibold">
             Key Technical Standards
           </span>
           <ul className="mt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {capability.specs.map((spec, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 font-sans text-xs text-[#CBD5E1]"
+                className="flex items-center gap-2 font-sans text-xs text-[#E2DDD5]"
               >
                 <CheckCircle2 className="h-3.5 w-3.5 text-amber-400 flex-shrink-0" />
                 <span>{spec}</span>

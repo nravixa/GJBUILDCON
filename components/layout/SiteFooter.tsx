@@ -53,12 +53,30 @@ export const SiteFooter: React.FC = () => {
           
           {/* COLUMN 1: Brand Navigation & Disciplines (4 cols) */}
           <div className="lg:col-span-4 flex flex-col justify-start">
-            <div className="mb-6">
-              <span className="font-monument text-[13px] uppercase tracking-[0.14em] text-gold-gradient block pb-2 border-b border-[#262930]/50 max-w-[260px]">
-                Engineering Disciplines
-              </span>
-            </div>
-            <ul className="space-y-3.5 font-futura text-xs tracking-wider uppercase text-[#8E929C]">
+            <Link
+              href="/"
+              className="group inline-flex items-center gap-3.5 mb-6 pb-4 border-b border-[#262930]/50 max-w-[320px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284]"
+              aria-label="GJ Buildcon Home"
+            >
+              <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-md group-hover:border-[#C2A284] transition-colors">
+                <Image
+                  src="/images/hero/logo.jpeg"
+                  alt="GJ Buildcon Official Logo"
+                  fill
+                  sizes="(max-width: 640px) 48px, 56px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-bourbon text-base uppercase tracking-[0.18em] text-[#FFFFFF] group-hover:text-[#DDB983] transition-colors font-bold">
+                  GJ BUILDCON
+                </span>
+                <span className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-[#C2A284] mt-1.5">
+                  Crafting Landmarks, Creating Legacies
+                </span>
+              </div>
+            </Link>
+            <ul className="space-y-3.5 font-sans text-xs tracking-wider uppercase text-[#A89F95]">
               <li>
                 <Link
                   href="/capabilities#civil-residential"
@@ -113,16 +131,16 @@ export const SiteFooter: React.FC = () => {
           {/* COLUMN 2: Center Feature (Newsletter Dispatch + Socials) (4 cols) */}
           <div className="lg:col-span-4 flex flex-col items-center text-center order-first lg:order-none pb-4 lg:pb-0">
             <div className="w-full max-w-md">
-              <h3 className="font-monument text-[13px] uppercase tracking-[0.14em] text-gold-gradient mb-3">
+              <h3 className="font-sans text-sm font-semibold uppercase tracking-[0.14em] text-gold-gradient mb-3">
                 Subscribe to our Expertise
               </h3>
-              <p className="font-futura text-xs text-[#7A7E88] max-w-xs mx-auto mb-6 leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-[#A89F95] max-w-xs mx-auto mb-6 leading-relaxed">
                 Receive confidential technical monographs, strata data, and heavy foundation engineering updates.
               </p>
 
               {/* MDE-Inspired Minimalist Underline Form with Sliding Arrow Button */}
               {subscribed ? (
-                <div className="py-4 px-6 border border-[#CBA985]/30 bg-[#16191F]/60 flex items-center justify-center gap-2 text-[#DFC4A4] font-monument text-xs uppercase tracking-wider animate-fadeIn">
+                <div className="py-4 px-6 border border-[#CBA985]/30 bg-[#16191F]/60 flex items-center justify-center gap-2 text-[#DFC4A4] font-sans text-xs font-semibold uppercase tracking-wider animate-fadeIn">
                   <Check className="h-4 w-4 text-[#DDB983]" />
                   <span>Technical Dispatch Registered</span>
                 </div>
@@ -139,13 +157,13 @@ export const SiteFooter: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="ENTER CORPORATE E-MAIL"
-                      className="w-full bg-transparent py-3 pr-20 font-futura text-xs uppercase tracking-wider text-[#F7F5F0] placeholder-[#7A7E88] focus:outline-none focus:ring-0"
+                      className="w-full bg-transparent py-3 pr-20 font-sans text-xs uppercase tracking-wider text-[#FFFFFF] placeholder-[#A89F95] focus:outline-none focus:ring-0"
                       aria-label="Enter corporate email"
                     />
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="mde-button-arrow absolute right-0 flex items-center gap-2 py-3 pl-2 font-monument text-[11px] uppercase tracking-widest text-[#DDB983] hover:text-[#F7F5F0] transition-colors cursor-pointer disabled:opacity-50"
+                      className="mde-button-arrow absolute right-0 flex items-center gap-2 py-3 pl-2 font-sans text-xs font-semibold uppercase tracking-widest text-[#DDB983] hover:text-[#FFFFFF] transition-colors cursor-pointer disabled:opacity-50"
                       aria-label="Send technical subscription"
                     >
                       <span className="text-gold-gradient font-semibold">
@@ -203,7 +221,7 @@ export const SiteFooter: React.FC = () => {
                   href={`https://wa.me/${companyData.whatsapp.replace("+", "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#F7F5F0] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
                   aria-label="Connect via WhatsApp Channel"
                   title="WhatsApp Channel"
                 >
@@ -212,7 +230,7 @@ export const SiteFooter: React.FC = () => {
 
                 <a
                   href={`tel:${companyData.phone}`}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#F7F5F0] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
                   aria-label="Executive Voice Line"
                   title="Direct Phone Line"
                 >
@@ -221,7 +239,7 @@ export const SiteFooter: React.FC = () => {
 
                 <a
                   href={`mailto:${companyData.email}`}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#F7F5F0] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
                   aria-label="Direct Email Channel"
                   title="Executive Email"
                 >
@@ -232,7 +250,7 @@ export const SiteFooter: React.FC = () => {
                   href="https://maps.google.com/?q=18.5986,73.7978"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#F7F5F0] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#CBA985]/30 text-[#CBA985] hover:border-[#DFC4A4] hover:bg-[#CBA985]/10 hover:text-[#FFFFFF] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DDB983]"
                   aria-label="Headquarters Coordinates (Google Maps)"
                   title="Pune Headquarters"
                 >
@@ -245,11 +263,11 @@ export const SiteFooter: React.FC = () => {
           {/* COLUMN 3: Corporate Record & Assistance (4 cols) */}
           <div className="lg:col-span-4 flex flex-col justify-start lg:items-end lg:text-right">
             <div className="mb-6">
-              <span className="font-monument text-[13px] uppercase tracking-[0.14em] text-gold-gradient block pb-2 border-b border-[#262930]/50 max-w-[260px] lg:ml-auto">
+              <span className="font-sans text-sm font-semibold uppercase tracking-[0.14em] text-gold-gradient block pb-2 border-b border-[#262930]/50 max-w-[260px] lg:ml-auto">
                 Corporate Record &amp; Access
               </span>
             </div>
-            <ul className="space-y-3.5 font-futura text-xs tracking-wider uppercase text-[#8E929C]">
+            <ul className="space-y-3.5 font-sans text-xs tracking-wider uppercase text-[#A89F95]">
               <li>
                 <Link
                   href="/#scale"
@@ -293,7 +311,7 @@ export const SiteFooter: React.FC = () => {
               <li>
                 <a
                   href={`tel:${companyData.phone}`}
-                  className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5 font-futura text-xs text-[#A89179]"
+                  className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5 font-sans text-xs text-[#DDB983] font-medium"
                 >
                   {companyData.phoneDisplay}
                 </a>
@@ -308,14 +326,14 @@ export const SiteFooter: React.FC = () => {
         {/* ========================================================= */}
         <div className="py-8 border-b border-[#262930]/60">
           <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-3 mb-4">
-            <span className="font-monument text-[11px] uppercase tracking-[0.15em] text-gold-gradient">
+            <span className="font-sans text-xs uppercase tracking-[0.15em] font-semibold text-gold-gradient">
               Regional Construction Sectors // Structural Typologies
             </span>
-            <span className="font-futura text-[11px] text-[#5A5E66] tracking-wider uppercase">
+            <span className="font-sans text-xs text-[#8E929C] tracking-wider uppercase font-medium">
               Pune Metropolitan Region Footprint
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-futura text-xs text-[#7A7E88]">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-sans text-xs text-[#A89F95]">
             {partnerDevelopers.map((p, idx) => (
               <span key={p.id} className="inline-flex items-center gap-2">
                 <span className="hover:text-[#DDB983] transition-colors duration-200">
@@ -332,14 +350,25 @@ export const SiteFooter: React.FC = () => {
         {/* ========================================================= */}
         {/* SHOWSTOPPER MONUMENTAL BRAND SLOGAN (Bourbon St Typeface from MDE) */}
         {/* ========================================================= */}
-        <div className="py-12 sm:py-16 lg:py-20 text-center select-none overflow-hidden">
+        <div className="py-12 sm:py-16 lg:py-20 text-center select-none overflow-hidden flex flex-col items-center">
+          <div className="relative h-24 w-24 sm:h-28 sm:w-28 mb-6 rounded-2xl overflow-hidden border border-[#3E342B]/90 bg-[#161311] shadow-2xl p-1.5 transition-transform duration-500 hover:scale-105">
+            <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#181512]">
+              <Image
+                src="/images/hero/logo.jpeg"
+                alt="GJ Buildcon Official Insignia"
+                fill
+                sizes="(max-width: 640px) 96px, 112px"
+                className="object-contain"
+              />
+            </div>
+          </div>
           <div
-            className="font-bourbon text-slogan-gradient uppercase tracking-tight text-[13.5vw] lg:text-[12.2vw] leading-[0.88] transition-transform duration-700 hover:scale-[1.01]"
+            className="font-bourbon text-slogan-gradient uppercase tracking-tight text-[13.5vw] lg:text-[12.2vw] leading-[1.05] transition-transform duration-700 hover:scale-[1.01] font-extrabold"
             aria-label="GJ Buildcon"
           >
             GJ Buildcon
           </div>
-          <div className="font-monument text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#7A7E88] mt-3">
+          <div className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-[#A89F95] mt-3">
             Subterranean Monograph • Heavy Civil &amp; Foundation Engineering
           </div>
         </div>
@@ -347,20 +376,20 @@ export const SiteFooter: React.FC = () => {
         {/* ========================================================= */}
         {/* BOTTOM LEGAL & COLOPHON BAR (Futura & PP Monument from MDE) */}
         {/* ========================================================= */}
-        <div className="pt-8 border-t border-[#262930]/60 flex flex-col lg:flex-row items-center justify-between gap-6 font-futura text-xs uppercase tracking-wider text-[#7A7E88]">
+        <div className="pt-8 border-t border-[#262930]/60 flex flex-col lg:flex-row items-center justify-between gap-6 font-sans text-xs uppercase tracking-wider text-[#A89F95]">
           
           {/* Left: Copyright & Coordinates */}
           <div className="text-center lg:text-left space-y-1">
-            <p className="text-[#A89179]">
+            <p className="text-[#C5BCB3]">
               &copy; 2026 {companyData.legalName}. All rights reserved.
             </p>
-            <p className="text-[10px] text-[#5A5E66] tracking-widest font-futura">
+            <p className="text-xs text-[#8E929C] tracking-widest font-sans font-medium">
               PUNE, MAHARASHTRA // 18.5986&deg; N, 73.7978&deg; E
             </p>
           </div>
 
           {/* Center: Legal & Specification Links */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#A89179]">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C5BCB3] font-medium">
             <Link
               href="/#scale"
               className="hover:text-[#DDB983] underline underline-offset-4 decoration-[#3E434D] hover:decoration-[#DDB983] transition-all"
@@ -389,12 +418,12 @@ export const SiteFooter: React.FC = () => {
 
           {/* Right: Pitch Colophon & Top Navigation */}
           <div className="flex items-center gap-4 text-center lg:text-right">
-            <span className="font-monument border border-[#262930] bg-[#14161B] px-3 py-1.5 text-[10px] text-[#A89179] tracking-wider">
+            <span className="font-sans font-semibold border border-[#262930] bg-[#14161B] px-3 py-1.5 text-xs text-[#C5BCB3] tracking-wider">
               DEMO // REDESIGN BY NRAVIXA
             </span>
             <a
               href="#site-header"
-              className="font-monument inline-flex items-center gap-1 text-[#DDB983] hover:text-[#F7F5F0] transition-colors text-[10px] tracking-widest"
+              className="font-sans font-semibold inline-flex items-center gap-1 text-[#DDB983] hover:text-[#FFFFFF] transition-colors text-xs tracking-widest"
               aria-label="Back to top of page"
             >
               <span>TOP</span>

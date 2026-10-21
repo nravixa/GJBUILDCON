@@ -33,7 +33,7 @@ export const MarqueeTicker: React.FC = () => {
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
               className="flex items-center gap-8 cursor-default group"
             >
-              <span className="font-monument text-[11px] uppercase tracking-[0.18em] text-[#C5BCB3] group-hover:text-[#FFFFFF] transition-colors">
+              <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#E2DDD5] group-hover:text-[#FFFFFF] transition-colors">
                 {item}
               </span>
               <span className="h-1.5 w-1.5 rounded-full bg-[#C2A284]" aria-hidden="true" />
@@ -50,7 +50,7 @@ export const MarqueeTicker: React.FC = () => {
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
               className="flex items-center gap-8 cursor-default group"
             >
-              <span className="font-monument text-[11px] uppercase tracking-[0.18em] text-[#C5BCB3] group-hover:text-[#FFFFFF] transition-colors">
+              <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#E2DDD5] group-hover:text-[#FFFFFF] transition-colors">
                 {item}
               </span>
               <span className="h-1.5 w-1.5 rounded-full bg-[#C2A284]" aria-hidden="true" />

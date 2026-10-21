@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Concept 01: The Monumental Monolith | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #F7F5F0;
+      --canvas-surface: #ECE8E0;
+      --ink: #191B1F;
+      --ink-muted: #5A5E66;
+      --border-hairline: #DCD7CD;
+      --accent-oxide: #9A4A32;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Top Control Bar for Lab Demo */
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #121417;
+      color: #F7F5F0;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border-bottom: 1px solid #262930;
+    }
+
+    .lab-controls a {
+      color: #DCD7CD;
+      text-decoration: none;
+      margin-right: 16px;
+      transition: color 0.2s;
+    }
+
+    .lab-controls a:hover {
+      color: #FFFFFF;
+    }
+
+    .btn-toggle-state {
+      background: #9A4A32;
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-toggle-state:hover {
+      opacity: 0.9;
+    }
+
+    /* Architectural Header */
+    .site-header {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 48px;
+      border-bottom: 1px solid var(--border-hairline);
+      background: var(--canvas);
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-chapter {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-contact:hover {
+      border-bottom-color: var(--ink);
+    }
+
+    /* Hero Section Stage */
+    .hero-stage {
+      position: relative;
+      min-height: calc(100vh - 114px);
+      padding: 48px 48px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-headline-wrap {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 7.2vw, 110px);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-sans);
+      font-size: clamp(15px, 1.4vw, 20px);
+      color: var(--ink-muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+
+    /* Architectural Image Frame */
+    .hero-image-container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      height: 380px;
+      position: relative;
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+      background: #D8D4CA;
+      transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      filter: contrast(1.05) brightness(0.96);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-caption-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      background: rgba(18, 20, 23, 0.82);
+      backdrop-filter: blur(4px);
+      color: #F7F5F0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      text-transform: uppercase;
+    }
+
+    /* Baseline Structural Ledger */
+    .hero-ledger {
+      width: 100%;
+      max-width: 1340px;
+      margin: 32px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-hairline);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .ledger-cell {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ledger-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .ledger-value {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* Simulating Scrolled State */
+    body.is-scrolled .hero-headline-wrap {
+      transform: translateY(-20px);
+    }
+
+    body.is-scrolled .hero-image-container {
+      height: 480px;
+    }
+
+    body.is-scrolled .hero-image {
+      transform: scale(1.04);
+    }
+
+    /* Responsive Adaptation */
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 0 20px;
+      }
+      .hero-stage {
+        padding: 32px 20px 20px;
+      }
+      .hero-title {
+        font-size: 44px;
+        line-height: 1.02;
+      }
+      .hero-image-container {
+        height: 260px;
+      }
+      .hero-ledger {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span style="color:#9A4A32; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Concept 01: The Monumental Monolith</span>
+    </div>
+    <div>
+      <button class="btn-toggle-state" onclick="document.body.classList.toggle('is-scrolled')">
+        Toggle Scroll State (Initial ↔ Scrolled)
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand-wordmark">GJ Buildcon</div>
+    <div class="nav-chapter">01 // THE MONOLITH</div>
+    <a href="tel:+919168777272" class="header-contact">+91 91687 77272</a>
+  </header>
+
+  <!-- Hero Stage -->
+  <main class="hero-stage">
+    
+    <div class="hero-headline-wrap">
+      <h1 class="hero-title">
+        Engineering<br>
+        Maharashtra's<br>
+        Structural Core.
+      </h1>
+      <p class="hero-tagline">
+        Over a decade of civil infrastructure and deep foundation engineering across Pune's premier urban corridors.
+      </p>
+    </div>
+
+    <div class="hero-image-container">
+      <img src="../../../public/images/hero/hero_architectural_monolith.jpg" alt="Architectural structural span" class="hero-image">
+      <div class="image-caption-badge">Architectural Concept Study // Demo Asset</div>
+    </div>
+
+    <div class="hero-ledger">
+      <div class="ledger-cell">
+        <span class="ledger-label">Location / Origin</span>
+        <span class="ledger-value">Pune, Maharashtra</span>
+      </div>
+      <div class="ledger-cell">
+        <span class="ledger-label">Engineering Discipline</span>
+        <span class="ledger-value">10+ Years Contracting</span>
+      </div>
+      <div class="ledger-cell">
+        <span class="ledger-label">Delivered Volume</span>
+        <span class="ledger-value">25+ Lakh Sq. Ft.</span>
+      </div>
+      <div class="ledger-cell">
+        <span class="ledger-label">Machinery Capacity</span>
+        <span class="ledger-value">4 MAIT & 2 SANY Rigs</span>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

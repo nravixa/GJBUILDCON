@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Concept 03: The Tectonic Split | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #F7F5F0;
+      --canvas-surface: #ECE8E0;
+      --ink: #191B1F;
+      --ink-muted: #5A5E66;
+      --border-hairline: #DCD7CD;
+      --accent-oxide: #9A4A32;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Lab Control Bar */
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #121417;
+      color: #F7F5F0;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border-bottom: 1px solid #262930;
+    }
+
+    .lab-controls a {
+      color: #DCD7CD;
+      text-decoration: none;
+      margin-right: 16px;
+      transition: color 0.2s;
+    }
+
+    .lab-controls a:hover {
+      color: #FFFFFF;
+    }
+
+    .badge-recommend {
+      background: #2D6A4F;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 2px;
+      margin-right: 8px;
+    }
+
+    .btn-toggle-state {
+      background: #9A4A32;
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-toggle-state:hover {
+      opacity: 0.9;
+    }
+
+    /* Architectural Header */
+    .site-header {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 48px;
+      border-bottom: 1px solid var(--border-hairline);
+      background: var(--canvas);
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-chapter {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-contact:hover {
+      border-bottom-color: var(--ink);
+    }
+
+    /* The Tectonic Split Stage */
+    .hero-split-stage {
+      min-height: calc(100vh - 114px);
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 58% 42%;
+      position: relative;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Vertical Structural Datum Line */
+    .hero-split-stage::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 58%;
+      width: 1px;
+      background-color: var(--border-hairline);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Left Column: Monumental Language */
+    .left-column {
+      padding: 64px 64px 48px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .monumental-title {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 6.2vw, 92px);
+      line-height: 0.96;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .thesis-subtext {
+      font-family: var(--font-sans);
+      font-size: clamp(15px, 1.3vw, 18px);
+      line-height: 1.55;
+      color: var(--ink-muted);
+      max-width: 520px;
+    }
+
+    .tagline-callout {
+      margin-top: 32px;
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-style: italic;
+      color: var(--accent-oxide);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .left-footer-meta {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      gap: 32px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
+
+    /* Right Column: Structural Frame */
+    .right-column {
+      padding: 64px 0 48px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .structural-visual-wrap {
+      width: 100%;
+      height: 480px;
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+      position: relative;
+      background: #D8D4CA;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .structural-visual {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: contrast(1.05) brightness(0.96);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .visual-caption-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      background: rgba(18, 20, 23, 0.85);
+      color: #F7F5F0;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+
+    .right-footer-meta {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink);
+    }
+
+    /* Scrolled State: The Structural Lintel Dock */
+    body.is-scrolled .left-column {
+      transform: translateY(-20px);
+    }
+
+    body.is-scrolled .tagline-callout {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body.is-scrolled .structural-visual-wrap {
+      height: 540px;
+    }
+
+    body.is-scrolled .structural-visual {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Adaptation */
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 0 20px;
+      }
+      .hero-split-stage {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+      .hero-split-stage::after {
+        display: none;
+      }
+      .left-column {
+        padding: 32px 0 24px;
+      }
+      .monumental-title {
+        font-size: 40px;
+        line-height: 1.02;
+      }
+      .right-column {
+        padding: 0 0 32px;
+      }
+      .structural-visual-wrap {
+        height: 280px;
+      }
+      .left-footer-meta, .right-footer-meta {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span class="badge-recommend">RECOMMENDED</span>
+      <span style="color:#9A4A32; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Concept 03: The Tectonic Split</span>
+    </div>
+    <div>
+      <button class="btn-toggle-state" onclick="document.body.classList.toggle('is-scrolled')">
+        Toggle Scroll State (Initial Arrival ↔ Lintel Dock)
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand-wordmark">GJ Buildcon</div>
+    <div class="nav-chapter">03 // TECTONIC SPLIT</div>
+    <a href="tel:+919168777272" class="header-contact">+91 91687 77272</a>
+  </header>
+
+  <!-- Hero Split Stage -->
+  <main class="hero-split-stage">
+    
+    <!-- Left Column: Typography -->
+    <div class="left-column">
+      <div>
+        <h1 class="monumental-title">
+          Engineering<br>
+          Maharashtra's<br>
+          Structural<br>
+          Core.
+        </h1>
+        <p class="thesis-subtext">
+          Civil construction contractor and deep foundation piling specialist operating across Pune and Maharashtra. Over a decade of proven execution backed by an in-house heavy machinery fleet.
+        </p>
+        <div class="tagline-callout">
+          "Crafting Landmarks, Creating Legacies™"
+        </div>
+      </div>
+
+      <div class="left-footer-meta">
+        <span>Pune, Maharashtra</span>
+        <span>Est. 2012</span>
+        <span>Civil & Piling Disciplines</span>
+      </div>
+    </div>
+
+    <!-- Right Column: Visual Frame -->
+    <div class="right-column">
+      <div class="structural-visual-wrap">
+        <img src="../../../public/images/hero/hero_architectural_monolith.jpg" alt="Structural concrete engineering mass" class="structural-visual">
+        <div class="visual-caption-badge">Architectural Concept Study // Demo Asset</div>
+      </div>
+
+      <div class="right-footer-meta">
+        <span><strong>25+ LAKH SQ. FT.</strong> DELIVERED</span>
+        <span><strong>4 MAIT / 2 SANY</strong> FLEET</span>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connected Homepage Opening Sequence | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #F7F5F0;
+      --canvas-surface: #ECE8E0;
+      --ink: #191B1F;
+      --ink-muted: #5A5E66;
+      --border-hairline: #DCD7CD;
+      --accent-oxide: #9A4A32;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Lab Top Bar */
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #121417;
+      color: #F7F5F0;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border-bottom: 1px solid #262930;
+    }
+
+    .lab-controls a { color: #DCD7CD; text-decoration: none; margin-right: 16px; }
+
+    .state-btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .state-btn {
+      background: #262930;
+      color: #F7F5F0;
+      border: 1px solid #3E434D;
+      padding: 6px 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .state-btn.active, .state-btn:hover {
+      background: var(--accent-oxide);
+      border-color: var(--accent-oxide);
+      color: #FFFFFF;
+    }
+
+    /* Architectural Global Header */
+    .site-header {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 64px;
+      border-bottom: 1px solid var(--border-hairline);
+      background: var(--canvas);
+    }
+
+    .brand-wordmark {
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-chapters {
+      display: flex;
+      gap: 32px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    .header-contact {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    /* Section Wrapper */
+    .section-wrap {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 0 64px;
+      position: relative;
+    }
+
+    /* =========================================
+       CHAPTER 00: THE TECTONIC SPLIT (HERO)
+       ========================================= */
+    .hero-split-stage {
+      min-height: calc(100vh - 124px);
+      display: grid;
+      grid-template-columns: 58% 42%;
+      position: relative;
+      border-bottom: 1px solid var(--border-hairline);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Vertical Structural Datum Line */
+    .hero-split-stage::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 58%;
+      width: 1px;
+      background-color: var(--border-hairline);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-left {
+      padding: 64px 64px 48px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 6.4vw, 96px);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-thesis-lead {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      max-width: 500px;
+    }
+
+    .hero-tagline-reveal {
+      margin-top: 24px;
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-style: italic;
+      color: var(--accent-oxide);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-meta-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      gap: 32px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
+
+    .hero-right {
+      padding: 64px 0 48px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-image-box {
+      width: 100%;
+      height: 480px;
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+      position: relative;
+      background: #D8D4CA;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.05) brightness(0.96);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-image-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      background: rgba(18, 20, 23, 0.85);
+      color: #F7F5F0;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+
+    .hero-right-meta {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink);
+    }
+
+    /* SCROLL STATE SIMULATION CLASSES */
+    body.state-02 .hero-left {
+      transform: translateY(-16px);
+    }
+    body.state-02 .hero-image-box img {
+      transform: scale(1.04);
+    }
+
+    body.state-03 .hero-left {
+      transform: translateY(-24px);
+    }
+    body.state-03 .hero-tagline-reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    body.state-03 .hero-image-box {
+      height: 520px;
+    }
+
+    /* =========================================
+       CHAPTER 01: THE ENGINEERING THESIS
+       ========================================= */
+    .section-thesis {
+      padding: 120px 0;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .thesis-grid {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .thesis-header-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chapter-number {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-oxide);
+      letter-spacing: 0.08em;
+    }
+
+    .chapter-title {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--ink);
+    }
+
+    .thesis-body-copy {
+      font-size: clamp(22px, 2.2vw, 32px);
+      line-height: 1.45;
+      color: var(--ink);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-subnote {
+      margin-top: 32px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      max-width: 620px;
+    }
+
+    /* =========================================
+       CHAPTER 02: AUDITED SCALE LEDGER
+       ========================================= */
+    .section-ledger {
+      padding: 100px 0 120px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .ledger-intro-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .ledger-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .ledger-table {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border-hairline);
+      background: var(--canvas-surface);
+    }
+
+    .ledger-column {
+      padding: 40px 32px;
+      border-right: 1px solid var(--border-hairline);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+      background: #FFFFFF;
+    }
+
+    .ledger-column:last-child {
+      border-right: none;
+    }
+
+    .metric-value {
+      font-family: var(--font-sans);
+      font-size: clamp(38px, 4vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric-unit {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--accent-oxide);
+    }
+
+    .metric-title {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .metric-desc {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+
+    /* =========================================
+       CHAPTER 03 PREVIEW: DUAL DISCIPLINES
+       ========================================= */
+    .section-disciplines-preview {
+      padding: 100px 0 120px;
+      background: var(--canvas);
+    }
+
+    .disciplines-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .discipline-card {
+      border: 1px solid var(--border-hairline);
+      background: #FFFFFF;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .disc-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .disc-desc {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .disc-image-box {
+      width: 100%;
+      height: 260px;
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .disc-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .site-header { padding: 0 24px; }
+      .section-wrap { padding: 0 24px; }
+      .hero-split-stage { grid-template-columns: 1fr; }
+      .hero-split-stage::after { display: none; }
+      .hero-left { padding: 48px 0 32px; }
+      .hero-right { padding: 0 0 48px; }
+      .thesis-grid { grid-template-columns: 1fr; gap: 32px; }
+      .ledger-table { grid-template-columns: repeat(2, 1fr); }
+      .ledger-column:nth-child(2) { border-right: none; }
+      .ledger-column:nth-child(1), .ledger-column:nth-child(2) { border-bottom: 1px solid var(--border-hairline); }
+      .disciplines-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="state-01">
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span style="color:#9A4A32; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Connected Sequence Storyboard (Candidate: The Tectonic Split)</span>
+    </div>
+    <div class="state-btn-group">
+      <button class="state-btn active" onclick="setScrollState('state-01', this)">Frame 01: Initial Arrival</button>
+      <button class="state-btn" onclick="setScrollState('state-02', this)">Frame 02: Scroll Engagement</button>
+      <button class="state-btn" onclick="setScrollState('state-03', this)">Frame 03: Lintel Dock & Payoff</button>
+    </div>
+  </div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="brand-wordmark">GJ Buildcon</div>
+    <div class="nav-chapters">
+      <span>00 // MONOGRAPH</span>
+      <span>01 // THESIS</span>
+      <span>02 // SCALE</span>
+      <span>03 // DISCIPLINES</span>
+      <span>04 // FLEET</span>
+    </div>
+    <a href="tel:+919168777272" class="header-contact">+91 91687 77272</a>
+  </header>
+
+  <!-- ================= CHAPTER 00: HERO ================= -->
+  <div class="section-wrap">
+    <div class="hero-split-stage">
+      
+      <!-- Left Column: Monumental Language -->
+      <div class="hero-left">
+        <div>
+          <h1 class="hero-title">
+            Engineering<br>
+            Maharashtra's<br>
+            Structural<br>
+            Core.
+          </h1>
+          <p class="hero-thesis-lead">
+            Civil construction contractor and deep foundation piling specialist operating across Pune and Maharashtra. Over a decade of proven execution backed by an in-house heavy machinery fleet.
+          </p>
+          <div class="hero-tagline-reveal">
+            "Crafting Landmarks, Creating Legacies™"
+          </div>
+        </div>
+
+        <div class="hero-meta-bottom">
+          <span>Pune, Maharashtra</span>
+          <span>Est. 2012</span>
+          <span>Civil & Piling Disciplines</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Frame -->
+      <div class="hero-right">
+        <div class="hero-image-box">
+          <img src="../../../public/images/hero/hero_architectural_monolith.jpg" alt="Architectural Structural Concrete">
+          <div class="hero-image-badge">Architectural Concept Study // Demo Asset</div>
+        </div>
+
+        <div class="hero-right-meta">
+          <span><strong>25+ LAKH SQ. FT.</strong> DELIVERED</span>
+          <span><strong>4 MAIT / 2 SANY</strong> FLEET</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= CHAPTER 01: THE THESIS ================= -->
+  <section class="section-thesis">
+    <div class="section-wrap">
+      <div class="thesis-grid">
+        
+        <div class="thesis-header-block">
+          <div class="chapter-number">CHAPTER 01 // OPERATIONAL STANCE</div>
+          <h2 class="chapter-title">The Engineering Thesis</h2>
+        </div>
+
+        <div>
+          <p class="thesis-body-copy">
+            "For over a decade, GJ Buildcon has executed complex civil infrastructure and deep foundation piling across Maharashtra. Operating our own fleet of heavy hydraulic rigs, we deliver structural durability from bedrock to skyline."
+          </p>
+          <p class="thesis-subnote">
+            Founded by Mr. Umesh Gatkal, our engineering journey bridges subterranean geotechnical mastery with multi-story reinforced concrete delivery. We eliminate subcontractor friction by controlling our own plant machinery.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 02: AUDITED SCALE LEDGER ================= -->
+  <section class="section-ledger">
+    <div class="section-wrap">
+      
+      <div class="ledger-intro-bar">
+        <div>
+          <div class="chapter-number">CHAPTER 02 // AUDITED PROOF POINTS</div>
+          <h2 class="ledger-title">Operational Scale in Numbers</h2>
+        </div>
+        <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink-muted);">
+          VERIFIED PUBLIC FOOTPRINT · ZERO ESTIMATED METRICS
+        </div>
+      </div>
+
+      <div class="ledger-table">
+        
+        <!-- Column 01 -->
+        <div class="ledger-column">
+          <div>
+            <div class="metric-value">10<span class="metric-unit">+</span></div>
+            <div class="metric-title">Years in Construction</div>
+          </div>
+          <p class="metric-desc">Continuous civil contracting history in Maharashtra; founder timeline rooted in regional engineering since 2008.</p>
+        </div>
+
+        <!-- Column 02 -->
+        <div class="ledger-column">
+          <div>
+            <div class="metric-value">25<span class="metric-unit">+</span></div>
+            <div class="metric-title">Lakh Sq. Ft. Delivered Volume</div>
+          </div>
+          <p class="metric-desc">Successfully completed volume spanning residential communities, commercial hubs, schools, hospitals, and temples.</p>
+        </div>
+
+        <!-- Column 03 -->
+        <div class="ledger-column">
+          <div>
+            <div class="metric-value">700<span class="metric-unit">+</span></div>
+            <div class="metric-title">Skilled On-Site Workforce</div>
+          </div>
+          <p class="metric-desc">Deployable civil construction labor force, supported by dedicated site supervisors and engineering staff.</p>
+        </div>
+
+        <!-- Column 04 -->
+        <div class="ledger-column">
+          <div>
+            <div class="metric-value">06<span class="metric-unit"> Rigs</span></div>
+            <div class="metric-title">Heavy Hydraulic Rotary Fleet</div>
+          </div>
+          <p class="metric-desc">In-house inventory of 4 MAIT and 2 SANY heavy piling units, supported by mobile Hydra cranes for zero rental downtime.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 03 PREVIEW ================= -->
+  <section class="section-disciplines-preview">
+    <div class="section-wrap">
+      
+      <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+        <div>
+          <div class="chapter-number">CHAPTER 03 // CORE VERTICALS</div>
+          <h2 class="ledger-title">Dual Engineering Disciplines</h2>
+        </div>
+        <div style="font-family:var(--font-mono); font-size:12px; color:var(--accent-oxide);">
+          CONTINUOUS ARCHITECTURAL HANDOFF →
+        </div>
+      </div>
+
+      <div class="disciplines-grid">
+        
+        <div class="discipline-card">
+          <div>
+            <div class="disc-image-box">
+              <img src="../../../public/images/capabilities/res_proj_1.png" alt="Civil Construction">
+            </div>
+            <h3 class="disc-title">Civil Construction & Infrastructure</h3>
+            <p class="disc-desc">
+              Comprehensive turnkey execution of multi-story residential towers, commercial office parks, educational campuses, and specialized medical facilities.
+            </p>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink); font-weight:700;">
+            EXPLORE CIVIL SPECIFICATIONS →
+          </div>
+        </div>
+
+        <div class="discipline-card">
+          <div>
+            <div class="disc-image-box">
+              <img src="../../../public/images/capabilities/hero_foundation_excavation.jpg" alt="Foundation Piling">
+            </div>
+            <h3 class="disc-title">Deep Foundation & Piling Solutions</h3>
+            <p class="disc-desc">
+              Specialized geotechnical socketing into Pune's Deccan basalt rock. Large-diameter bored cast-in-situ piles, augur drilling, tractor rigs, and tripod systems.
+            </p>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:12px; color:var(--ink); font-weight:700;">
+            EXPLORE PILING DOSSIER →
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function setScrollState(stateClass, btnElement) {
+      document.body.className = stateClass;
+      document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+      btnElement.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

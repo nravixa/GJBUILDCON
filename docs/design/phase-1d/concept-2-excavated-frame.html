@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Concept 02: The Excavated Frame | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas-deep: #121417;
+      --canvas-aperture: #ECE8E0;
+      --ink-light: #F7F5F0;
+      --ink-dark: #191B1F;
+      --ink-muted: #8E929A;
+      --border-deep: #262930;
+      --accent-oxide: #A85138;
+      --font-display: 'Cabinet Grotesk', -apple-system, sans-serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas-deep);
+      color: var(--ink-light);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+      transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Lab Control Bar */
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0A0B0D;
+      color: #F7F5F0;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border-bottom: 1px solid #1F2228;
+    }
+
+    .lab-controls a {
+      color: #8E929A;
+      text-decoration: none;
+      margin-right: 16px;
+      transition: color 0.2s;
+    }
+
+    .lab-controls a:hover {
+      color: #FFFFFF;
+    }
+
+    .btn-toggle-state {
+      background: var(--accent-oxide);
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    /* Architectural Dark Header */
+    .site-header {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 48px;
+      border-bottom: 1px solid var(--border-deep);
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    .nav-chapter {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-oxide);
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-contact:hover {
+      border-bottom-color: var(--ink-light);
+    }
+
+    /* The Excavated Aperture Stage */
+    .aperture-stage {
+      padding: 40px 48px 48px;
+      min-height: calc(100vh - 114px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .aperture-portal {
+      width: 100%;
+      max-width: 1280px;
+      background: var(--canvas-aperture);
+      color: var(--ink-dark);
+      border: 8px solid #1C1F26;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      min-height: 520px;
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .portal-content {
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .portal-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-oxide);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .portal-title {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 4.2vw, 68px);
+      line-height: 0.98;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink-dark);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .portal-desc {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      color: #4A4E57;
+      max-width: 460px;
+    }
+
+    .portal-visual-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #2A2E35;
+      overflow: hidden;
+    }
+
+    .portal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: contrast(1.1) brightness(0.9);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .portal-badge {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(18, 20, 23, 0.88);
+      color: #F7F5F0;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+
+    /* Subterranean Depth Telemetry */
+    .strata-telemetry {
+      width: 100%;
+      max-width: 1280px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--border-deep);
+      padding-top: 16px;
+    }
+
+    /* Scrolled State: Aperture Expands */
+    body.is-scrolled {
+      background-color: #E2DDD3;
+      color: #191B1F;
+    }
+
+    body.is-scrolled .site-header {
+      border-bottom-color: #CFC9BE;
+    }
+
+    body.is-scrolled .brand-wordmark,
+    body.is-scrolled .header-contact {
+      color: #191B1F;
+    }
+
+    body.is-scrolled .aperture-portal {
+      max-width: 1400px;
+      border-width: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    body.is-scrolled .portal-image {
+      transform: scale(1.06);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 0 20px;
+      }
+      .aperture-stage {
+        padding: 24px 20px;
+      }
+      .aperture-portal {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .portal-content {
+        padding: 32px 24px;
+      }
+      .portal-title {
+        font-size: 34px;
+      }
+      .portal-visual-wrap {
+        height: 240px;
+      }
+      .strata-telemetry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span style="color:#A85138; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Concept 02: The Excavated Frame</span>
+    </div>
+    <div>
+      <button class="btn-toggle-state" onclick="document.body.classList.toggle('is-scrolled')">
+        Toggle Scroll State (Subterranean ↔ Expanded Surface)
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand-wordmark">GJ Buildcon</div>
+    <div class="nav-chapter">02 // EXCAVATED APERTURE</div>
+    <a href="tel:+919168777272" class="header-contact">+91 91687 77272</a>
+  </header>
+
+  <!-- Aperture Stage -->
+  <main class="aperture-stage">
+    
+    <div class="aperture-portal">
+      <div class="portal-content">
+        <div>
+          <div class="portal-eyebrow">Deccan Strata Foundation // Pune Corridors</div>
+          <h1 class="portal-title">
+            Anchored In Bedrock.<br>
+            Engineered For The Skyline.
+          </h1>
+          <p class="portal-desc">
+            Piling engineering and heavy civil contracting rooted in Pune's subterranean basalt geology. Powered by our proprietary fleet of 4 MAIT and 2 SANY rotary rigs.
+          </p>
+        </div>
+        <div style="margin-top: 32px; font-family: var(--font-mono); font-size: 13px; color: #191B1F;">
+          <strong>25+ LAKH SQ. FT.</strong> DELIVERED VOLUME · <strong>700+</strong> ON-SITE WORKFORCE
+        </div>
+      </div>
+
+      <div class="portal-visual-wrap">
+        <img src="../../../public/images/capabilities/hero_foundation_excavation.jpg" alt="Active foundation excavation and piling site" class="portal-image">
+        <div class="portal-badge">Architectural Concept Study // Demo Asset</div>
+      </div>
+    </div>
+
+    <div class="strata-telemetry">
+      <div>GEOLOGICAL ELEVATION: SUB-SURFACE FOUNDATIONS</div>
+      <div>PUNE, MAHARASHTRA // EST. 2012</div>
+      <div>IN-HOUSE HEAVY HYDRAULIC PILING FLEET</div>
+    </div>
+
+  </main>
+
+</body>
+</html>

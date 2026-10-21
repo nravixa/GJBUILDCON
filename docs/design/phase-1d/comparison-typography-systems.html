@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Specimen Lab: System A vs System B | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #F7F5F0;
+      --ink: #191B1F;
+      --ink-muted: #5A5E66;
+      --border-hairline: #DCD7CD;
+      --accent-oxide: #9A4A32;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #121417;
+      color: #F7F5F0;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Space Mono', monospace;
+      border-bottom: 1px solid #262930;
+    }
+
+    .lab-controls a { color: #DCD7CD; text-decoration: none; margin-right: 16px; }
+
+    .lab-container {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 40px 48px 80px;
+    }
+
+    .lab-header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-hairline);
+      padding-bottom: 24px;
+    }
+
+    .lab-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--accent-oxide);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .lab-title {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .lab-subtitle {
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 820px;
+      line-height: 1.5;
+    }
+
+    /* Grid for Two Systems */
+    .systems-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .system-board {
+      border: 1px solid var(--border-hairline);
+      background: #FFFFFF;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .system-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .tag-recommended { background: #2D6A4F; color: #FFFFFF; }
+    .tag-alternative { background: #4A4E57; color: #FFFFFF; }
+
+    .specimen-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .specimen-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--accent-oxide);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* System A Styles */
+    .sys-a-display {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 56px;
+      line-height: 0.98;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sys-a-medium {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .sys-a-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #3C4048;
+    }
+
+    .sys-a-nav {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      gap: 20px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .sys-a-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 10px 18px;
+      background: var(--ink);
+      color: #F7F5F0;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .sys-a-specs {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      background: #F7F5F0;
+      padding: 12px 16px;
+      border-left: 2px solid var(--accent-oxide);
+    }
+
+    /* System B Styles */
+    .sys-b-display {
+      font-family: 'Cabinet Grotesk', -apple-system, sans-serif;
+      font-size: 48px;
+      line-height: 0.96;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .sys-b-medium {
+      font-family: 'Cabinet Grotesk', -apple-system, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sys-b-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #3C4048;
+    }
+
+    .sys-b-nav {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      gap: 20px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .sys-b-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 10px 18px;
+      background: var(--ink);
+      color: #F7F5F0;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .sys-b-specs {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      letter-spacing: 0.02em;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.5;
+      background: #F7F5F0;
+      padding: 12px 16px;
+      border-left: 2px solid #191B1F;
+    }
+
+    @media (max-width: 900px) {
+      .lab-container { padding: 24px 20px; }
+      .systems-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span style="color:#9A4A32; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Typography Specimen Lab: System A vs System B</span>
+    </div>
+  </div>
+
+  <div class="lab-container">
+    
+    <div class="lab-header">
+      <div class="lab-eyebrow">Real Typographic Specimen Hierarchy</div>
+      <h1 class="lab-title">Typography System Comparison</h1>
+      <p class="lab-subtitle">
+        Comparing the Three-Font Classical Architectural System (*Instrument Serif* + *Inter* + *Space Mono*) against the Two-Font Modernist Structural System (*Cabinet Grotesk* + *Inter*).
+      </p>
+    </div>
+
+    <div class="systems-grid">
+      
+      <!-- System A -->
+      <div class="system-board">
+        <div>
+          <span class="system-tag tag-recommended">SYSTEM A: RECOMMENDED (THREE-FONT)</span>
+          <div style="font-size:13px; color:var(--ink-muted); margin-top:8px;">
+            <strong>Instrument Serif</strong> (Display) + <strong>Inter</strong> (Body/UI) + <strong>Space Mono</strong> (Specs)
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">01. Large Monumental Headline</div>
+          <div class="sys-a-display">
+            Engineering<br>
+            Maharashtra's<br>
+            Structural Core.
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">02. Medium Section Heading</div>
+          <div class="sys-a-medium">
+            Founded in Deccan Basalt. Built for Urban Scale.
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">03. Editorial Body Paragraph</div>
+          <p class="sys-a-body">
+            For over a decade, GJ Buildcon has executed complex civil infrastructure and deep foundation piling across Maharashtra. Operating our own fleet of heavy hydraulic rotary rigs, we deliver structural durability from bedrock to skyline.
+          </p>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">04. Navigation Bar Items</div>
+          <div class="sys-a-nav">
+            <span>GJ Buildcon</span>
+            <span>01 // Monograph</span>
+            <span>Disciplines</span>
+            <span>Fleet</span>
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">05. Primary Action Button</div>
+          <a href="#" class="sys-a-action">Direct Consultation →</a>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">06. Restrained Engineering Specification</div>
+          <div class="sys-a-specs">
+            TELEMETRY: 04 MAIT HYDRAULIC RIGS · 02 SANY ROTARY UNITS · 25+ LAKH SQ. FT. DELIVERED
+          </div>
+        </div>
+
+        <div style="font-size:12px; color:#2D6A4F; font-weight:600; border-top:1px solid var(--border-hairline); padding-top:16px;">
+          ✓ Delivers extraordinary distinction, high-culture architectural dignity, and complete freedom from generic SaaS aesthetics.
+        </div>
+      </div>
+
+      <!-- System B -->
+      <div class="system-board">
+        <div>
+          <span class="system-tag tag-alternative">SYSTEM B: ALTERNATIVE (TWO-FONT)</span>
+          <div style="font-size:13px; color:var(--ink-muted); margin-top:8px;">
+            <strong>Cabinet Grotesk / Syne</strong> (Display/Headings) + <strong>Inter</strong> (Body/Specs)
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">01. Large Monumental Headline</div>
+          <div class="sys-b-display">
+            ENGINEERING<br>
+            MAHARASHTRA'S<br>
+            STRUCTURAL CORE.
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">02. Medium Section Heading</div>
+          <div class="sys-b-medium">
+            FOUNDED IN DECCAN BASALT. BUILT FOR URBAN SCALE.
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">03. Editorial Body Paragraph</div>
+          <p class="sys-b-body">
+            For over a decade, GJ Buildcon has executed complex civil infrastructure and deep foundation piling across Maharashtra. Operating our own fleet of heavy hydraulic rotary rigs, we deliver structural durability from bedrock to skyline.
+          </p>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">04. Navigation Bar Items</div>
+          <div class="sys-b-nav">
+            <span>GJ BUILDCON</span>
+            <span>01 OVERVIEW</span>
+            <span>DISCIPLINES</span>
+            <span>FLEET</span>
+          </div>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">05. Primary Action Button</div>
+          <a href="#" class="sys-b-action">DIRECT CONSULTATION →</a>
+        </div>
+
+        <div class="specimen-group">
+          <div class="specimen-label">06. Restrained Engineering Specification</div>
+          <div class="sys-b-specs">
+            TELEMETRY: 04 MAIT HYDRAULIC RIGS · 02 SANY ROTARY UNITS · 25+ LAKH SQ. FT. DELIVERED
+          </div>
+        </div>
+
+        <div style="font-size:12px; color:#5A5E66; font-weight:600; border-top:1px solid var(--border-hairline); padding-top:16px;">
+          ⚠ Modernist and punchy, but risks looking like a Scandinavian branding agency or design studio rather than a civil contractor.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

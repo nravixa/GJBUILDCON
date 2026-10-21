@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparison: Still Imagery vs Video-Led Hero | GJ Buildcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #F7F5F0;
+      --ink: #191B1F;
+      --ink-muted: #5A5E66;
+      --border-hairline: #DCD7CD;
+      --accent-oxide: #9A4A32;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+    }
+
+    .lab-controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #121417;
+      color: #F7F5F0;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border-bottom: 1px solid #262930;
+    }
+
+    .lab-controls a { color: #DCD7CD; text-decoration: none; margin-right: 16px; }
+
+    .comparison-container {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 40px 48px 80px;
+    }
+
+    .comp-header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-hairline);
+      padding-bottom: 24px;
+    }
+
+    .comp-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-oxide);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .comp-title {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .comp-subtitle {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 800px;
+      line-height: 1.5;
+    }
+
+    /* Side-by-Side Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .comp-card {
+      border: 1px solid var(--border-hairline);
+      background: #FFFFFF;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .badge-recommended { background: #2D6A4F; color: #FFFFFF; }
+    .badge-caution { background: #8B5E3C; color: #FFFFFF; }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .card-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Media Mockup Box */
+    .media-box {
+      width: 100%;
+      height: 260px;
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+      position: relative;
+      background: #E6E2DA;
+      margin-bottom: 24px;
+    }
+
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-simulation-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 20, 23, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .video-play-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    /* Telemetry Table */
+    .telemetry-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    .telemetry-table tr {
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .telemetry-table td {
+      padding: 8px 0;
+    }
+
+    .telemetry-table td:last-child {
+      text-align: right;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .comparison-container { padding: 24px 20px; }
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lab Control Bar -->
+  <div class="lab-controls">
+    <div>
+      <span style="color:#9A4A32; font-weight:700;">PHASE 1D LAB</span> // 
+      <a href="index.html">← Master Lab Index</a>
+      <span>Still vs Video Media Comparison</span>
+    </div>
+  </div>
+
+  <div class="comparison-container">
+    
+    <div class="comp-header">
+      <div class="comp-eyebrow">Technical Feasibility & Aesthetic Evaluation</div>
+      <h1 class="comp-title">Still Imagery vs. Video-Led Hero</h1>
+      <p class="comp-subtitle">
+        Evaluating the trade-offs between a high-resolution, scroll-expanded still architectural photograph versus an ambient video reel for the GJ Buildcon homepage opening.
+      </p>
+    </div>
+
+    <div class="comparison-grid">
+      
+      <!-- Option 1: Still Image -->
+      <div class="comp-card">
+        <div>
+          <span class="card-badge badge-recommended">OPTION 01: RECOMMENDED</span>
+          <h2 class="card-title">Still Image with Scroll Expansion</h2>
+          <p class="card-desc">
+            Typography leads the opening. High-contrast architectural still image sits recessed inside a 1px hairline frame. On scroll, the container expands smoothly into a panoramic span with zero layout shifts or bandwidth lag.
+          </p>
+
+          <div class="media-box">
+            <img src="../../../public/images/hero/hero_architectural_monolith.jpg" alt="Architectural Still Concept">
+            <div style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.8); color:#FFF; font-family:var(--font-mono); font-size:10px; padding:2px 6px;">
+              STATIC WEBP // 95 KB
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <table class="telemetry-table">
+            <tr>
+              <td>Initial Payload</td>
+              <td style="color:#2D6A4F;">&lt; 95 KB (WebP / AVIF)</td>
+            </tr>
+            <tr>
+              <td>Largest Contentful Paint (LCP)</td>
+              <td style="color:#2D6A4F;">~0.65s (Instant 4K)</td>
+            </tr>
+            <tr>
+              <td>Authentic Asset Reality</td>
+              <td>High (Concept Stills Viable)</td>
+            </tr>
+            <tr>
+              <td>Mobile Battery & Data Draw</td>
+              <td style="color:#2D6A4F;">Zero Overhead</td>
+            </tr>
+            <tr>
+              <td>Reduced-Motion Compliance</td>
+              <td style="color:#2D6A4F;">100% Native</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Option 2: Curated Video -->
+      <div class="comp-card">
+        <div>
+          <span class="card-badge badge-caution">OPTION 02: HIGH FEASIBILITY RISK</span>
+          <h2 class="card-title">Curated Industrial Video Loop</h2>
+          <p class="card-desc">
+            Cinematic aerial footage of foundation piling and concrete pouring. Highly kinetic, but carries severe authenticity risks: <strong>GJ Buildcon currently possesses zero authentic drone video footage</strong>.
+          </p>
+
+          <div class="media-box">
+            <img src="../../../public/images/capabilities/hero_foundation_excavation.jpg" alt="Video Simulation Fallback">
+            <div class="video-simulation-overlay">
+              <div class="video-play-icon">▶</div>
+              <div>AMBIENT MP4 LOOP SIMULATION</div>
+              <div style="font-size:10px; opacity:0.8; margin-top:4px;">REQUIRES REAL 4K DRONE FOOTAGE</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <table class="telemetry-table">
+            <tr>
+              <td>Initial Payload</td>
+              <td style="color:#A85138;">2.8 MB – 5.2 MB (Compressed)</td>
+            </tr>
+            <tr>
+              <td>Largest Contentful Paint (LCP)</td>
+              <td style="color:#A85138;">~2.4s – 3.8s (Delayed)</td>
+            </tr>
+            <tr>
+              <td>Authentic Asset Reality</td>
+              <td style="color:#A85138;">Critical Gap (Zero footage exists)</td>
+            </tr>
+            <tr>
+              <td>Mobile Battery & Data Draw</td>
+              <td style="color:#A85138;">Moderate-High (Paused on Data-Saver)</td>
+            </tr>
+            <tr>
+              <td>Reduced-Motion Compliance</td>
+              <td>Requires Static Poster Fallback</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

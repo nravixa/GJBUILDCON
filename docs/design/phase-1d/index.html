@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GJ Buildcon — Phase 1D Visual Art Direction Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #121417;
+      --bg-surface: #1C1F26;
+      --border-dark: #2B303C;
+      --text-light: #F7F5F0;
+      --text-muted: #8E929C;
+      --accent-oxide: #9A4A32;
+      --accent-green: #2D6A4F;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Master Top Header */
+    .lab-master-header {
+      height: 68px;
+      padding: 0 28px;
+      background: #0E1013;
+      border-bottom: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .lab-logo-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .lab-badge {
+      background: var(--accent-oxide);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    .lab-heading {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .lab-status-note {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Layout Body: Sidebar + Main Stage */
+    .lab-body {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    .lab-sidebar {
+      width: 320px;
+      background: #14171D;
+      border-right: 1px solid var(--border-dark);
+      padding: 24px 20px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .nav-group-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-oxide);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-item-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: 1px solid transparent;
+      color: #C8CCD6;
+      padding: 10px 14px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+
+    .nav-item-btn:hover {
+      background: var(--bg-surface);
+      color: #FFFFFF;
+      border-color: #333844;
+    }
+
+    .nav-item-btn.active {
+      background: var(--bg-surface);
+      color: #FFFFFF;
+      border-color: var(--accent-oxide);
+    }
+
+    .mini-tag-rec {
+      background: var(--accent-green);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 2px;
+    }
+
+    /* Main Stage */
+    .lab-stage-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #0B0D10;
+      overflow: hidden;
+    }
+
+    /* Viewport Toolbar */
+    .stage-toolbar {
+      height: 48px;
+      background: #161920;
+      border-bottom: 1px solid var(--border-dark);
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .viewport-btn-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .vp-btn {
+      background: #232732;
+      color: #D1D5DF;
+      border: 1px solid #363B48;
+      padding: 4px 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .vp-btn.active, .vp-btn:hover {
+      background: var(--accent-oxide);
+      border-color: var(--accent-oxide);
+      color: #FFFFFF;
+    }
+
+    .open-standalone-link {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #A0A5B2;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .open-standalone-link:hover {
+      color: #FFFFFF;
+    }
+
+    /* Iframe Wrapper */
+    .iframe-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      overflow: auto;
+      background: #08090B;
+    }
+
+    .preview-frame {
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--border-dark);
+      background: #FFFFFF;
+      transition: width 0.3s ease;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Master Bar -->
+  <header class="lab-master-header">
+    <div class="lab-logo-title">
+      <span class="lab-badge">PHASE 1D</span>
+      <span class="lab-heading">Visual Art Direction Lab // Prototype Approval</span>
+    </div>
+    <div class="lab-status-note">
+      READ-ONLY DESIGN ARTIFACTS · ISOLATED FROM NEXT.JS APP
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div class="lab-body">
+    
+    <!-- Sidebar -->
+    <aside class="lab-sidebar">
+      
+      <!-- Group 1: Hero Directions -->
+      <div>
+        <div class="nav-group-title">
+          <span>01. Three Hero Concepts</span>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('concept-1-monolith.html', this)">
+              <span>Concept 01: The Monolith</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('concept-2-excavated-frame.html', this)">
+              <span>Concept 02: The Excavated Frame</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn active" onclick="loadArtifact('concept-3-tectonic-split.html', this)">
+              <span>Concept 03: The Tectonic Split</span>
+              <span class="mini-tag-rec">REC</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 2: Connected Candidate Sequence -->
+      <div>
+        <div class="nav-group-title">
+          <span>02. Connected Candidate Sequence</span>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('connected-sequence-storyboard.html', this)">
+              <span>Opening + Thesis + Scale Ledger</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 3: Comparative Studies -->
+      <div>
+        <div class="nav-group-title">
+          <span>03. Comparative Studies</span>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('comparison-still-vs-video.html', this)">
+              <span>Still vs Video-Led Hero</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('comparison-light-vs-dark.html', this)">
+              <span>Light vs Dark Choreography</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('comparison-typography-systems.html', this)">
+              <span>Typography Specimen Lab</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" onclick="loadArtifact('comparison-desktop-mobile.html', this)">
+              <span>Desktop vs Mobile Redesign</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 4: Decision Documentation -->
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-dark); font-size:12px; color:var(--text-muted);">
+        <div><strong>Decision Docs:</strong></div>
+        <div style="margin-top:6px; font-family:var(--font-mono); font-size:11px;">
+          • <a href="PHASE-1D-OWNER-REVIEW-SHEET.md" style="color:#C8CCD6; text-decoration:none;">Owner Review Sheet</a><br>
+          • <a href="PHASE-1D-FACTUAL-VERIFICATION-STATUS.md" style="color:#C8CCD6; text-decoration:none;">Factual Verification</a><br>
+          • <a href="PHASE-1D-VISUAL-ARTIFACTS-INDEX.md" style="color:#C8CCD6; text-decoration:none;">Artifacts Index</a>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Main Stage -->
+    <main class="lab-stage-container">
+      
+      <!-- Stage Toolbar -->
+      <div class="stage-toolbar">
+        <div class="viewport-btn-group">
+          <button class="vp-btn active" onclick="setViewport('100%', this)">Full Screen</button>
+          <button class="vp-btn" onclick="setViewport('1440px', this)">Desktop 1440px</button>
+          <button class="vp-btn" onclick="setViewport('1024px', this)">Tablet 1024px</button>
+          <button class="vp-btn" onclick="setViewport('390px', this)">Mobile 390px</button>
+        </div>
+
+        <a id="standaloneLink" href="concept-3-tectonic-split.html" target="_blank" class="open-standalone-link">
+          Open Standalone Tab ↗
+        </a>
+      </div>
+
+      <!-- Iframe Wrapper -->
+      <div class="iframe-wrapper">
+        <iframe id="previewIframe" src="concept-3-tectonic-split.html" class="preview-frame" frameborder="0"></iframe>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    function loadArtifact(url, btnElement) {
+      document.getElementById('previewIframe').src = url;
+      document.getElementById('standaloneLink').href = url;
+      document.querySelectorAll('.nav-item-btn').forEach(b => b.classList.remove('active'));
+      btnElement.classList.add('active');
+    }
+
+    function setViewport(width, btnElement) {
+      document.getElementById('previewIframe').style.width = width;
+      document.querySelectorAll('.vp-btn').forEach(b => b.classList.remove('active'));
+      btnElement.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

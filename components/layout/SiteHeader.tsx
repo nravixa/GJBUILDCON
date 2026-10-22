@@ -37,67 +37,68 @@ export const SiteHeader: React.FC = () => {
         id="site-header"
         className="sticky top-0 z-40 w-full border-b border-[#2D2622] bg-[#12100E]/90 backdrop-blur-md transition-all duration-300 text-[#FFFFFF]"
       >
-        <div className="mx-auto flex h-20 max-w-[1536px] items-center justify-between px-6 sm:px-10 lg:px-16">
+        <div className="mx-auto flex h-20 max-w-[1536px] items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           
-          {/* Left: Navigation Menu */}
-          <div className="flex-1 hidden lg:flex items-center">
+          {/* 1. LEFT GROUP: Navigation links (Desktop) */}
+          <div className="hidden lg:flex items-center justify-start min-w-0 pr-2 xl:pr-4">
             <DesktopNavigation />
           </div>
 
-          {/* Center: Architectural Wordmark & Brand Logo */}
-          <div className="flex items-center justify-start lg:justify-center flex-1 lg:flex-initial">
+          {/* 2. CENTER GROUP: Company logo & Brand name (Desktop: Centered; Mobile: Left aligned) */}
+          <div className="flex items-center justify-start lg:justify-center shrink-0">
             <Link
               href="/"
-              className="group flex items-center gap-3.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] p-1"
+              className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] p-1 rounded-sm"
               aria-label="GJ Buildcon Home"
             >
-              <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-md group-hover:border-[#C2A284] transition-all">
+              <div className="relative h-10 w-10 sm:h-11 sm:w-11 shrink-0 overflow-hidden rounded-xl border border-[#3E342B]/80 bg-[#161311] shadow-md group-hover:border-[#C2A284] transition-all">
                 <Image
                   src="/images/hero/logo.jpeg"
                   alt="GJ Buildcon Official Logo"
                   fill
-                  sizes="(max-width: 640px) 44px, 48px"
+                  sizes="44px"
                   className="object-contain"
                   priority
                 />
               </div>
               <div className="flex flex-col items-start leading-none">
-                <span className="font-bourbon text-base sm:text-lg tracking-[0.16em] text-[#FFFFFF] group-hover:text-[#C5BCB3] transition-colors leading-none uppercase font-bold">
-                  G J &nbsp; B U I L D C O N
+                <span className="font-bourbon text-base sm:text-lg tracking-[0.14em] text-[#FFFFFF] group-hover:text-[#C5BCB3] transition-colors leading-none uppercase font-bold whitespace-nowrap">
+                  GJ BUILDCON
                 </span>
-                <span className="font-sans text-[11px] sm:text-xs tracking-[0.12em] uppercase font-semibold text-[#C5BCB3] mt-1">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] uppercase font-semibold text-[#C5BCB3] mt-1 whitespace-nowrap">
                   PUNE &amp; MAHARASHTRA
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Right: Live Telemetry & Lenval-Style LET'S TALK */}
-          <div className="flex-1 flex items-center justify-end gap-4 sm:gap-6">
-            {/* Live Pune Time */}
-            <div className="hidden xl:flex items-center gap-2 font-sans text-xs uppercase tracking-wider font-medium text-[#C5BCB3]">
+          {/* 3. RIGHT GROUP: Pune time, Theme toggle, LET'S TALK button & Mobile toggle */}
+          <div className="flex items-center justify-end min-w-0 gap-2.5 sm:gap-3.5 xl:gap-5 pl-2">
+            {/* Live Pune Location & Time Pill (Desktop xl+) */}
+            <div className="hidden xl:flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#A89F95] whitespace-nowrap bg-[#181512] border border-[#2D2622] rounded-full px-3 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
               <span>{puneTime}</span>
             </div>
 
-            {/* Dark Mode / Light Mode Wavy Toggle Switch */}
+            {/* Dark/Light Mode Functional Theme Toggle */}
             <ThemeToggle />
 
-            {/* Lenval Signature "● LET'S TALK" Button */}
+            {/* Refined Pill-Shaped "LET'S TALK" Button (Desktop & Tablet) */}
             <Link
-              href="/#enquiry"
-              className="inline-flex items-center gap-2 rounded-full border border-[#2D2622] bg-[#181512] hover:bg-[#221D18] hover:border-[#C2A284]/50 px-4 sm:px-5 py-2 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] transition-all duration-300 shadow-sm"
+              href="/contact"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[#2D2622] bg-[#181512] hover:bg-[#221D18] hover:border-[#C2A284]/60 px-4 py-2 font-sans text-xs uppercase tracking-wider font-semibold text-[#FFFFFF] transition-all duration-300 shadow-sm shrink-0 whitespace-nowrap"
               aria-label="Jump to project consultation"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
               <span>Let&apos;s Talk</span>
             </Link>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile Menu Hamburger Button */}
             <button
               id="mobile-menu-toggle"
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="flex h-10 w-10 lg:hidden items-center justify-center rounded-full border border-[#2D2622] bg-[#181512] text-[#FFFFFF] hover:border-[#C2A284] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284]"
+              className="flex h-10 w-10 lg:hidden items-center justify-center rounded-full border border-[#2D2622] bg-[#181512] text-[#FFFFFF] hover:border-[#C2A284] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C2A284] shrink-0"
               aria-expanded={mobileMenuOpen}
               aria-label="Open mobile navigation menu"
             >

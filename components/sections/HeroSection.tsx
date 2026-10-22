@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
       <section
         ref={sectionRef}
         id="hero"
-        aria-label="Lenval Architecture Hero — Creators of Refined Structures"
+        aria-label="GJ Buildcon Hero — Builders of Refined Landmarks & Iconic Structures"
         className={`relative min-h-[92vh] sm:min-h-screen w-full flex flex-col justify-between overflow-hidden transition-colors duration-700 ${
           isLight ? "bg-[#F7F5F0] text-[#191B1F]" : "bg-[#12100E] text-[#FFFFFF]"
         }`}
@@ -76,8 +76,8 @@ export const HeroSection: React.FC = () => {
           aria-hidden={isLight}
         >
           <Image
-            src="/images/hero/hero-foundation-engineering.webp"
-            alt="Atmospheric heavy foundation engineering and rotary drilling rig at dawn"
+            src="/images/hero/hero_architectural_monolith.jpg"
+            alt="Atmospheric multi-storey architectural civil construction and iconic monolithic concrete structure at dusk"
             fill
             priority
             sizes="100vw"
@@ -164,7 +164,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div>
                   <span className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284] block">
-                    CIVIL EXECUTION &amp; ROTARY PILING
+                    PREMIER CIVIL CONTRACTING &amp; INFRASTRUCTURE
                   </span>
                   <span className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.12em] font-medium text-[#C5BCB3] block mt-0.5">
                     CRAFTING LANDMARKS, CREATING LEGACIES
@@ -174,7 +174,7 @@ export const HeroSection: React.FC = () => {
 
               <div className="max-w-md">
                 <p className="font-sans text-sm sm:text-base text-[#E2DDD5] leading-relaxed font-normal">
-                  Turnkey multi-storey reinforced concrete construction and deep hydraulic rotary rock socketing into challenging Deccan basalt strata across Western Maharashtra.
+                  Precision civil engineering, multi-storey residential towers, commercial landmarks, and institutional infrastructure executed with uncompromising structural integrity across Pune.
                 </p>
               </div>
 
@@ -198,7 +198,7 @@ export const HeroSection: React.FC = () => {
                 </motion.a>
 
                 <MotionLink
-                  href="/capabilities"
+                  href="/services-projects"
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 350, damping: 25 }}
@@ -208,7 +208,7 @@ export const HeroSection: React.FC = () => {
                       : "border border-[#2D2622] bg-[#181512]/80 text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#1F1B17]"
                   }`}
                 >
-                  <span>Capabilities</span>
+                  <span>Our Services</span>
                 </MotionLink>
               </div>
             </div>
@@ -219,8 +219,8 @@ export const HeroSection: React.FC = () => {
               className="lg:col-span-7 flex flex-col items-start lg:items-end text-left lg:text-right"
             >
               <h1 className="font-bourbon text-4xl sm:text-6xl md:text-7xl lg:text-[68px] xl:text-[80px] leading-[1.08] uppercase text-[#FFFFFF] tracking-tight font-extrabold">
-                Creators of Refined<br />
-                Foundations &amp; Iconic<br />
+                Builders of Refined<br />
+                Landmarks &amp; Iconic<br />
                 Structures
               </h1>
             </div>

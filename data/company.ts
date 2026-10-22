@@ -9,7 +9,7 @@ export const companyData: CompanyMetadata = {
   experienceYears: "10+",
   deliveredVolume: "Extensive Structural Volume",
   workforceCount: "Mobilized Engineering Workforce",
-  fleetCount: "Heavy Rotary Piling Fleet",
+  fleetCount: "Construction & Heavy Plant",
   phone: "+919168777272",
   phoneDisplay: "+91 91687 77272",
   whatsapp: "+919168777272",

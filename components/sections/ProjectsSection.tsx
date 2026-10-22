@@ -211,15 +211,15 @@ export const ProjectsSection: React.FC = () => {
               
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm border border-[#2D2622] bg-[#12100E] group/sub">
                 <Image
-                  src="/images/capabilities/drilling-equipment-editorial.webp"
-                  alt="Crawler rotary drilling rig on hard basalt rock platform with drilling mast and Kelly bar"
+                  src="/images/capabilities/comm_spaces_2.png"
+                  alt="Commercial corporate complex and multi-storey office floorplates under construction in Pune"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover brightness-[0.8] contrast-[1.1] transition-transform duration-700 ease-out group-hover/sub:scale-105"
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3 py-1.5 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium">
-                  <span>Fig. 5.2 // Subterranean Heavy Plant</span>
-                  <span className="text-[#A89F95]">GEOTECHNICAL RIGGING // BASALT STRATA</span>
+                  <span>Fig. 5.2 // Commercial Structural Execution</span>
+                  <span className="text-[#A89F95]">HIGH-SPAN OPEN FLOORPLATES</span>
                 </div>
               </div>
             </div>
@@ -297,23 +297,34 @@ export const ProjectsSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Transparent Editorial Disclaimer */}
+          {/* Transparent Editorial Disclaimer & Gallery CTA */}
           <div className="mt-8 pt-6 border-t border-[#2D2622] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-sans text-xs text-[#A89F95] leading-relaxed">
             <span>
-              Portfolio Note: Typologies illustrate structural delivery capability across Pune. Authentic jobsite photography and verified client project dossiers will be updated following owner confirmation.
+              Documented structural delivery capability across Pune &amp; PCMC. Explore complete project details, photographs, and technical dossiers.
             </span>
             <Link
-              href="/capabilities"
+              href="/services-projects#projects"
               className="group inline-flex items-center gap-2 font-sans uppercase text-xs font-semibold tracking-wider text-[#FFFFFF] hover:text-[#C2A284] transition-colors flex-shrink-0"
             >
               <span className="relative">
-                Explore Technical Disciplines
+                Explore Full Project Gallery &amp; Dossiers
                 <span className="absolute left-0 -bottom-0.5 h-[1px] w-full bg-[#2D2622] group-hover:bg-[#C2A284] transition-colors" />
               </span>
               <ArrowUpRight className="h-3.5 w-3.5 text-[#C2A284] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
+        </div>
+
+        {/* Global Bottom Button to Full Gallery */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/services-projects#projects"
+            className="inline-flex items-center gap-2 rounded-full border border-[#FFFFFF] bg-[#FFFFFF] px-8 py-3.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#12100E] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 shadow-md"
+          >
+            <span>View All Services &amp; Projects Gallery</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
 
       </div>

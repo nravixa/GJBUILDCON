@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -153,7 +155,7 @@ export const ScaleLedgerSection: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Column 04: Heavy Rotary Fleet */}
+          {/* Column 04: Construction Machinery & Plant */}
           <motion.div
             whileHover={{ y: -4, backgroundColor: "#1C1815" }}
             transition={{ type: "spring", stiffness: 350, damping: 25 }}
@@ -162,17 +164,31 @@ export const ScaleLedgerSection: React.FC = () => {
             <div className="absolute top-3 right-3 font-mono text-xs text-[#C5BCB3]/60">04</div>
             <div>
               <div className="font-bourbon text-3xl sm:text-4xl tracking-tight text-[#FFFFFF] leading-tight uppercase font-bold">
-                ROTARY<span className="text-[#C2A284] font-normal text-xl sm:text-2xl ml-1">FLEET</span>
+                HEAVY<span className="text-[#C2A284] font-normal text-xl sm:text-2xl ml-1">PLANT</span>
               </div>
               <div className="mt-4 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF]">
-                Heavy Piling Fleet Capabilities
+                Construction Plant &amp; Equipment
               </div>
             </div>
             <p className="mt-6 font-sans text-sm text-[#E2DDD5] leading-relaxed font-normal">
-              Specialized heavy rotary drilling rigs and mobile support cranes deployed for deep rock socketing and continuous pile execution.
+              Heavy lifting cranes, modular staging systems, and integrated secondary rotary foundation machinery deployed across Pune.
             </p>
           </motion.div>
 
+        </div>
+
+        {/* Action Link to Why Choose Us */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-xl border border-[#2D2622] bg-[#161311]">
+          <div className="font-sans text-xs sm:text-sm text-[#D4CDC5]">
+            Want to see how our operational scale translates into schedule certainty for your project?
+          </div>
+          <Link
+            href="/why-choose-us"
+            className="inline-flex items-center gap-2 rounded-full border border-[#C2A284]/40 bg-[#12100E] px-6 py-2.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#C2A284]/10 transition-all shrink-0"
+          >
+            <span>The 6 Pillars Advantage</span>
+            <ArrowUpRight className="h-4 w-4 text-[#C2A284]" />
+          </Link>
         </div>
 
       </div>

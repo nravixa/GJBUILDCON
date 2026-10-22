@@ -2,58 +2,54 @@ import { NavItem } from "@/types";
 
 export const primaryNavigation: NavItem[] = [
   {
-    label: "Overview",
+    label: "Home",
     href: "/",
-    description: "Executive summary & operational scale",
+    description: "Executive overview & structural credentials",
   },
   {
-    label: "Capabilities",
-    href: "/capabilities",
-    badge: "Dual Vertical",
-    description: "Civil construction & deep foundation piling",
+    label: "About Us",
+    href: "/about",
+    description: "Heritage, founder narrative & engineering values",
   },
   {
-    label: "Heavy Fleet",
-    href: "/#fleet",
-    badge: "Rotary",
-    description: "Hydraulic rotary drilling & mobile crane units",
+    label: "Our Services",
+    href: "/services-projects",
+    badge: "Dual Showcase",
+    description: "Civil construction, rotary piling & landmark projects",
   },
   {
-    label: "Heritage",
-    href: "/#heritage",
-    description: "2008–2025 leadership & milestone timeline",
+    label: "Why Choose Us",
+    href: "/why-choose-us",
+    description: "The 6 pillars of GJ Buildcon engineering advantage",
   },
   {
-    label: "Projects",
-    href: "/#projects",
-    badge: "Pipeline",
-    description: "Extensive Pune structural footprint & typologies",
-  },
-  {
-    label: "Enquiry",
-    href: "/#enquiry",
-    description: "Consultation terminal & direct contact",
+    label: "Contact Us",
+    href: "/contact",
+    description: "Direct consultation terminal & verified contact",
   },
 ];
 
 export const footerNavigation: { group: string; items: NavItem[] }[] = [
   {
-    group: "Capabilities",
+    group: "Pages",
     items: [
-      { label: "Residential Civil Works", href: "/capabilities#civil-residential" },
-      { label: "Commercial Floorplates", href: "/capabilities#civil-commercial" },
-      { label: "Institutional & Hospitals", href: "/capabilities#civil-institutional" },
-      { label: "Augur Foundation Piling", href: "/capabilities#piling-augur" },
-      { label: "Tripod & Urban Piling", href: "/capabilities#piling-tripod" },
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about" },
+      { label: "Our Services", href: "/services-projects" },
+      { label: "Why Choose Us", href: "/why-choose-us" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
   {
-    group: "Company",
+    group: "Services & Fleet",
     items: [
-      { label: "Heritage Timeline (2008–2025)", href: "/#heritage" },
-      { label: "Heavy Rotary Fleet", href: "/capabilities#fleet" },
-      { label: "Regional Sector Engagements", href: "/#partners" },
-      { label: "Pune Regional Footprint", href: "/#projects" },
+      { label: "Residential Civil Towers", href: "/services-projects#civil-residential" },
+      { label: "Commercial Floorplates", href: "/services-projects#civil-commercial" },
+      { label: "Institutional & Hospitals", href: "/services-projects#civil-institutional" },
+      { label: "Augur Rotary Piling (CFA)", href: "/services-projects#piling-augur" },
+      { label: "Tripod Infill Piling", href: "/services-projects#piling-tripod" },
+      { label: "Heavy Fleet (MAIT & SANY)", href: "/services-projects#fleet" },
+      { label: "Completed Projects Gallery", href: "/services-projects#projects" },
     ],
   },
   {
@@ -62,7 +58,10 @@ export const footerNavigation: { group: string; items: NavItem[] }[] = [
       { label: "Direct Phone: +91 91687 77272", href: "tel:+919168777272" },
       { label: "WhatsApp: +91 91687 77272", href: "https://wa.me/919168777272" },
       { label: "Email: gjconstruction111@gmail.com", href: "mailto:gjconstruction111@gmail.com" },
-      { label: "Consultation Terminal", href: "/#enquiry" },
+      { label: "Consultation Terminal", href: "/contact" },
+      { label: "Pune HQ: Pimple Saudagar", href: "/contact#map" },
     ],
   },
 ];
+
+

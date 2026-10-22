@@ -34,21 +34,22 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | GJ Buildcon — Civil Construction & Piling Engineering",
-    default: "GJ Buildcon | Civil Construction & Piling Experts in Pune",
+    template: "%s | GJ Buildcon — Premier Civil Construction & Infrastructure",
+    default: "GJ Buildcon | Premier Civil Construction & Infrastructure in Pune",
   },
   description:
-    "Over a decade delivering residential, commercial, institutional civil construction and heavy rotary piling solutions in Pune. Comprehensive structural execution with specialized rotary machinery fleet.",
+    "Over a decade delivering premier residential towers, commercial landmarks, institutional facilities, and turnkey civil construction across Pune, supported by integrated deep foundation engineering.",
   keywords: [
     "GJ Buildcon",
     "G and J Buildcon",
     "Civil Construction Pune",
-    "Piling Services Pune",
-    "Augur Piling Rigs",
-    "Rotary Piling Rigs",
-    "Hydraulic Piling Pune",
-    "Deep Foundations",
+    "Building Contractors Pune",
+    "Commercial Construction",
+    "Residential Towers Pune",
     "Infrastructure Contractors Pune",
+    "RCC Superstructure",
+    "Piling Services Pune",
+    "Deep Foundations",
     "Pimple Saudagar Builder",
   ],
   authors: [{ name: "GJ Buildcon" }, { name: "NRAVIXA", url: "https://nravixa.vercel.app" }],
@@ -72,16 +73,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://gjbuildcon.com",
-    title: "GJ Buildcon | Civil Construction & Piling Specialists",
+    title: "GJ Buildcon | Premier Civil Construction & Infrastructure",
     description:
-      "Crafting Landmarks, Creating Legacies™. Extensive civil construction delivered across Pune with dedicated heavy rotary piling capabilities.",
+      "Crafting Landmarks, Creating Legacies™. Over a decade delivering iconic residential, commercial, and civil infrastructure projects across Pune, backed by integrated foundation engineering.",
     siteName: "GJ Buildcon",
     images: [
       {
-        url: "/images/hero/hero-foundation-engineering.webp",
+        url: "/images/hero/hero_architectural_monolith.jpg",
         width: 1200,
         height: 630,
-        alt: "GJ Buildcon Architectural Construction & Piling Engineering",
+        alt: "GJ Buildcon Architectural Construction & Infrastructure Engineering",
       },
     ],
   },

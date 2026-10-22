@@ -2,10 +2,12 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { companyData } from "@/data/company";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 export const StorySection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -254,8 +256,17 @@ export const StorySection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed max-w-md">
-            Direct executive oversight on every deep foundation rig deployment and major structural concrete pour across Western Maharashtra.
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed max-w-md">
+              Direct executive oversight on every deep foundation rig deployment and major structural concrete pour across Western Maharashtra.
+            </div>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 rounded-full border border-[#C2A284]/40 bg-[#12100E] px-5 py-2.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#C2A284]/10 transition-all shrink-0"
+            >
+              <span>Our Full Story</span>
+              <ArrowUpRight className="h-3.5 w-3.5 text-[#C2A284]" />
+            </Link>
           </div>
         </motion.div>
 

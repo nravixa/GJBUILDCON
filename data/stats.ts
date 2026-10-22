@@ -25,10 +25,10 @@ export const auditedMilestones: MetricStat[] = [
   },
   {
     id: "machinery",
-    value: "Rotary",
-    suffix: "Fleet",
-    label: "Heavy Piling Capabilities",
-    sublabel: "Specialized hydraulic rotary rigs with mobile crane support",
+    value: "Complete",
+    suffix: "Plant",
+    label: "Construction Machinery & Plant",
+    sublabel: "Heavy lifting cranes, modular staging systems, and secondary foundation equipment",
     verified: false,
   },
 ];

@@ -10,9 +10,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/capabilities`,
+      url: `${baseUrl}/about`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services-projects`,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/why-choose-us`,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
   ];
 }

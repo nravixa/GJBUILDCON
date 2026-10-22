@@ -120,7 +120,7 @@ export const MachineryBasaltSection: React.FC = () => {
     <section
       ref={sectionRef}
       id="machinery"
-      aria-label="Chapter 04: Subterranean Basalt Machinery"
+      aria-label="Chapter 04: Civil Execution & Heavy Plant"
       className="relative border-b border-[#2D2622] bg-[#161311] text-[#FFFFFF] py-20 sm:py-28 lg:py-32 scroll-mt-12"
     >
       <span id="fleet" className="sr-only">Fleet Anchor</span>
@@ -134,21 +134,21 @@ export const MachineryBasaltSection: React.FC = () => {
           <div>
             <div className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#C2A284] mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C2A284]" />
-              <span>Chapter 04 // Subterranean Basalt Machinery</span>
+              <span>Chapter 04 // Civil Execution &amp; Heavy Plant</span>
             </div>
             <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.12] sm:leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
-              The Basalt Drilling Fleet
+              Construction Machinery &amp; Heavy Plant
             </h2>
           </div>
           <div className="font-sans text-xs text-[#A89F95] uppercase tracking-[0.15em] font-medium">
-            Drilling Equipment &amp; Fleet Capabilities · Rock Socketing Engineering
+            Structural Lifting · Modular Formwork · Foundation Support
           </div>
         </div>
 
         {/* Lead Narrative */}
         <div ref={narrativeRef} className="max-w-3xl mb-12 lg:mb-16">
           <p className="font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed">
-            Sub-surface rock socketing in Pune&apos;s dense Deccan basalt formation requires high-capacity hydraulic machinery. GJ Buildcon deploys a dedicated rotary drilling fleet—ensuring continuous deep foundation schedules from initial mobilization to final pile cut-off.
+            Delivering large-scale civil projects and landmark high-rise structures demands heavy lifting equipment, advanced concrete batching, and precision staging. GJ Buildcon commands a comprehensive machinery plant—from mobile rigging cranes and modular formwork systems to integrated rotary foundation equipment.
           </p>
         </div>
 
@@ -163,8 +163,8 @@ export const MachineryBasaltSection: React.FC = () => {
 
               <div ref={imageParallaxRef} className="relative w-full h-[115%] -top-[7.5%] will-change-transform">
                 <Image
-                  src="/images/capabilities/hydraulic-rig-detail.webp"
-                  alt="High-pressure hydraulic lines, heavy crawler tracks and mechanical mast assembly of a rotary piling rig"
+                  src="/images/capabilities/structural-foundation-concept.webp"
+                  alt="High-rise construction staging, structural framework, and heavy civil machinery"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover object-center brightness-[0.8] contrast-[1.1] transition-transform duration-700 ease-out group-hover:scale-105"
@@ -172,14 +172,14 @@ export const MachineryBasaltSection: React.FC = () => {
               </div>
               {/* Technical Caption */}
               <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-4 py-2.5 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium z-10">
-                <span>Fig. 4.1 // Hydraulic Assembly &amp; Drive System</span>
-                <span className="text-[#A89F95]">ASSET LOG // PUNE FIELD FLEET</span>
+                <span>Fig. 4.1 // Civil Infrastructure &amp; Heavy Lifting Execution</span>
+                <span className="text-[#A89F95]">ASSET LOG // PUNE FIELD SITES</span>
               </div>
             </div>
 
             {/* Technical Sub-Caption */}
             <div className="mt-4 pt-4 border-t border-[#2D2622] flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-sans text-xs text-[#A89F95] font-medium">
-              <span>APPLICATION: CAST-IN-SITU BORED PILING</span>
+              <span>APPLICATION: TURNKEY RCC SUPERSTRUCTURE &amp; PILING</span>
               <span className="text-[#C2A284]">PUNE REGIONAL DEPLOYMENT</span>
             </div>
           </div>
@@ -187,66 +187,66 @@ export const MachineryBasaltSection: React.FC = () => {
           {/* Dossier Column */}
           <div ref={dossierRef} className="lg:col-span-5 flex flex-col justify-between space-y-8">
             
-            {/* Unit 01: MAIT Fleet */}
+            {/* Unit 01: Tower Cranes & Rigging */}
             <motion.div
               whileHover={{ x: 4 }}
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="border-b border-[#2D2622] pb-6 will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
               <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
-                <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 01 // ROTARY DRILLING</span>
-                <span className="text-[#A89F95]">ROTARY SPEC</span>
+                <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 01 // STRUCTURAL LIFTING</span>
+                <span className="text-[#A89F95]">HEAVY RIGGING</span>
               </div>
               <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
-                MAIT Hydraulic Rotary Rigs
+                Tower Cranes &amp; Mobile Rigging Units
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
-                Track-mounted heavy hydraulic rotary drilling rigs engineered for deep bored cast-in-situ piles through fractured and solid basalt strata.
+                Heavy-duty mobile cranes and tower lifting systems for vertical material transport, structural steel placement, and multi-tier framework erection.
               </p>
               <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
-                Strata: Solid Basalt Socketing · Heavy Operational Fleet
+                Role: Superstructure Lifting &amp; High-Elevation Placement
               </div>
             </motion.div>
 
-            {/* Unit 02: SANY Fleet */}
+            {/* Unit 02: Formwork Systems */}
             <motion.div
               whileHover={{ x: 4 }}
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="border-b border-[#2D2622] pb-6 will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
               <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
-                <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 02 // CRAWLER DRILLING</span>
-                <span className="text-[#A89F95]">CRAWLER SPEC</span>
+                <span className="text-[#C2A284] uppercase tracking-[0.18em]">ASSET 02 // CONCRETE &amp; FORMWORK</span>
+                <span className="text-[#A89F95]">SURFACE SPEC</span>
               </div>
               <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
-                SANY Heavy Rotary Units
+                Engineered Modular Formwork Systems
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
-                High-torque crawler rotary rigs utilized for large-diameter bored foundation shafts and heavy vertical load-bearing columns.
+                Industrial aluminium and steel shuttering systems ensuring tight structural tolerances, rapid vertical pouring cycles, and monolithic concrete finishes.
               </p>
               <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
-                Strata: Large-Diameter Piling · Continuous Drilling Cycles
+                Role: High-Rise Core Walls &amp; Monolithic Slab Casting
               </div>
             </motion.div>
 
-            {/* Unit 03: Support Cranes & Hydra */}
+            {/* Unit 03: Integrated Foundation Support Rigs */}
             <motion.div
               whileHover={{ x: 4 }}
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
               className="will-change-transform cursor-default transition-colors hover:border-[#C2A284]/40"
             >
               <div className="flex items-center justify-between font-sans text-xs font-semibold mb-2">
-                <span className="text-[#C2A284] uppercase tracking-[0.18em]">SUPPORT 03 // SITE LOGISTICS</span>
-                <span className="text-[#A89F95]">RIGGING FLEET</span>
+                <span className="text-[#C2A284] uppercase tracking-[0.18em]">SUPPORT 03 // FOUNDATION RIGS</span>
+                <span className="text-[#A89F95]">SUB-GRADE SPEC</span>
               </div>
               <h3 className="font-bourbon text-xl sm:text-2xl uppercase leading-snug text-[#FFFFFF] mb-2 font-bold tracking-tight">
-                Hydra Cranes &amp; Auxiliary Units
+                Hydraulic Rotary &amp; Augur Piling Rigs
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#E2DDD5] leading-relaxed">
-                Mobile site cranes and auxiliary utility fleet managing heavy steel rebar cage placement, tremie pipe deployment, and concrete logistics.
+                Specialized track-mounted hydraulic rigs (MAIT / SANY) deployed for sub-grade bored piling and basalt rock socketing to establish unshakeable project bases.
               </p>
               <div className="mt-3 font-sans text-xs text-[#A89F95] uppercase font-medium">
-                Role: Rebar Cage Handling &amp; Tremie Concrete Pouring
+                Role: Bedrock Anchoring &amp; Geotechnical Foundation Support
               </div>
             </motion.div>
 

@@ -89,7 +89,7 @@ export const ThesisSection: React.FC = () => {
             </h2>
           </div>
           <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
-            WESTERN MAHARASHTRA • BEDROCK TO SKYLINE
+            WESTERN MAHARASHTRA • FOUNDATION TO SUPERSTRUCTURE
           </div>
         </div>
 
@@ -107,8 +107,8 @@ export const ThesisSection: React.FC = () => {
               <div className="absolute bottom-2 right-2 z-20 font-mono text-xs text-[#C2A284]/80 select-none">+</div>
 
               <Image
-                src="/images/capabilities/foundation-drilling-concept.webp"
-                alt="Rotary foundation drilling into hard Deccan rock strata"
+                src="/images/capabilities/structural-foundation-concept.webp"
+                alt="Monolithic reinforced concrete superstructure and structural framework under construction in Pune"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover object-center brightness-[0.8] contrast-[1.1] transition-transform duration-700 ease-out group-hover:scale-105"
@@ -119,10 +119,10 @@ export const ThesisSection: React.FC = () => {
               {/* Bottom Caption Pill */}
               <div className="absolute bottom-4 left-4 right-4 z-20 rounded border border-[#2D2622] bg-[#161311]/90 backdrop-blur-md p-3">
                 <div className="font-sans text-xs uppercase tracking-wider font-semibold text-[#C2A284]">
-                  GEOTECHNICAL RIGOR
+                  STRUCTURAL MASTERY
                 </div>
                 <div className="mt-1 font-sans text-xs text-[#E2DDD5] leading-normal font-normal">
-                  Heavy hydraulic rotary auguring into Deccan Basalt rock beds.
+                  Monolithic reinforced concrete framework &amp; structural execution across Pune.
                 </div>
               </div>
             </div>
@@ -131,11 +131,11 @@ export const ThesisSection: React.FC = () => {
           {/* Right Column: Lenval Monumental Manifesto & Narrative */}
           <div ref={narrativeRef} className="lg:col-span-7 flex flex-col justify-center">
             <blockquote className="font-bourbon text-2xl sm:text-3xl lg:text-4xl leading-[1.25] text-[#FFFFFF] font-semibold tracking-normal border-none p-0 m-0 uppercase">
-              &ldquo;For over a decade, GJ Buildcon has executed complex civil infrastructure and deep foundation piling across Maharashtra. We deliver structural durability from bedrock to skyline.&rdquo;
+              &ldquo;For over a decade, GJ Buildcon has engineered premier residential towers, commercial landmarks, and critical civil infrastructure across Pune with uncompromising structural strength.&rdquo;
             </blockquote>
 
             <p className="mt-8 font-sans text-base sm:text-lg text-[#E2DDD5] leading-relaxed font-normal">
-              Founded by Mr. Umesh Gatkal, our engineering journey bridges subterranean geotechnical mastery with multi-story reinforced concrete delivery. By deploying specialized heavy hydraulic machinery and experienced engineering crews, we eliminate operational friction and protect project timelines.
+              Founded by Mr. Umesh Gatkal, our firm delivers end-to-end building construction—from precision concrete superstructures to integrated deep foundation support. By deploying specialized civil machinery, experienced engineering crews, and stringent quality control, we build resilient landmarks that define Pune&apos;s urban skyline.
             </p>
 
             {/* Editorial Metadata Badges */}
@@ -150,7 +150,7 @@ export const ThesisSection: React.FC = () => {
               </div>
               <div>
                 <span className="block font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
-                  ANNUAL FOUNDATIONS
+                  PROJECT FOOTPRINT
                 </span>
                 <span className="mt-1 block font-bourbon text-xl font-bold text-[#FFFFFF]">
                   100+ SITES
@@ -158,10 +158,10 @@ export const ThesisSection: React.FC = () => {
               </div>
               <div className="col-span-2 sm:col-span-1">
                 <span className="block font-sans text-xs uppercase tracking-wider font-semibold text-[#C5BCB3]">
-                  PRIMARY STRATA
+                  ENGINEERING REACH
                 </span>
                 <span className="mt-1 block font-bourbon text-xl font-bold text-[#C2A284]">
-                  DECCAN BASALT
+                  PMR REGION
                 </span>
               </div>
             </div>

@@ -114,11 +114,11 @@ export const DisciplinesDiptychSection: React.FC = () => {
               <span>Chapter 03 // Engineering Disciplines</span>
             </div>
             <h2 className="font-bourbon text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.15] text-[#FFFFFF] font-bold tracking-tight">
-              The Dual-Vertical Framework
+              Integrated Civil &amp; Structural Disciplines
             </h2>
           </div>
           <div className="font-sans text-xs text-[#C5BCB3] uppercase tracking-wider font-semibold">
-            Superstructure Civil Execution · Subterranean Piling Engineering
+            Primary Civil Superstructures · Supporting Geotechnical Groundwork
           </div>
         </div>
 
@@ -133,8 +133,8 @@ export const DisciplinesDiptychSection: React.FC = () => {
             <div>
               {/* Technical Indicator */}
               <div className="flex items-center justify-between font-sans text-xs text-[#C2A284] uppercase tracking-wider font-semibold mb-4 pb-3 border-b border-[#2D2622]">
-                <span>01 // SUPERSTRUCTURE &amp; CIVIL EXECUTION</span>
-                <span className="text-[#C5BCB3]">ABOVE-GRADE</span>
+                <span>01 // CORE VERTICAL: CIVIL SUPERSTRUCTURES &amp; INFRASTRUCTURE</span>
+                <span className="text-[#C5BCB3]">PRIMARY EXECUTION</span>
               </div>
 
               {/* Title & Editorial Description */}
@@ -194,7 +194,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
                 
                 <div ref={image1Ref} className="relative w-full h-[115%] -top-[7.5%] will-change-transform">
                   <Image
-                    src="/images/capabilities/structural-foundation-concept.webp"
+                    src="/images/capabilities/infrastructure-scale-concept.webp"
                     alt="Monolithic reinforced concrete superstructure and foundation grid under construction"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -203,7 +203,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
                 </div>
                 {/* Architectural Caption Metadata */}
                 <div className="absolute bottom-0 inset-x-0 bg-[#12100E]/90 backdrop-blur-sm border-t border-[#2D2622] px-3.5 py-2 flex items-center justify-between font-sans text-xs text-[#E2DDD5] uppercase tracking-wider font-medium z-10">
-                  <span>Fig. 3.1 // RCC Framework Execution</span>
+                  <span>Fig. 3.1 // Large-Scale Civil Superstructure Execution</span>
                   <span className="text-[#C5BCB3]">SPECIFICATION // PUNE STRUCTURAL DOSSIER</span>
                 </div>
               </div>
@@ -211,7 +211,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
               {/* Action Link */}
               <div className="mt-6 flex items-center justify-between">
                 <Link
-                  href="/capabilities"
+                  href="/services-projects#civil-residential"
                   className="group inline-flex items-center gap-2 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
                 >
                   <span className="relative">
@@ -235,16 +235,16 @@ export const DisciplinesDiptychSection: React.FC = () => {
             <div>
               {/* Technical Indicator */}
               <div className="flex items-center justify-between font-sans text-xs text-[#C2A284] uppercase tracking-wider font-semibold mb-4 pb-3 border-b border-[#2D2622]">
-                <span>02 // SUBTERRANEAN &amp; GEOTECHNICAL</span>
-                <span className="text-[#C5BCB3]">BELOW-GRADE</span>
+                <span>02 // SUPPORTING VERTICAL: GEOTECHNICAL &amp; FOUNDATION</span>
+                <span className="text-[#C5BCB3]">SUPPORTING GROUNDWORK</span>
               </div>
 
               {/* Title & Editorial Description */}
               <h3 className="font-bourbon text-2xl sm:text-3xl lg:text-4xl uppercase leading-[1.18] text-[#FFFFFF] mb-4 font-bold tracking-tight">
-                Deep Foundation &amp; Piling Solutions
+                Supporting Deep Foundation &amp; Piling Solutions
               </h3>
               <p className="font-sans text-sm sm:text-base text-[#E2DDD5] leading-relaxed mb-8 font-normal">
-                Sub-surface stability dictates structural permanence. Deploying specialized heavy rotary drilling rigs and crawler equipment, we engineer cast-in-situ bored piles, auger piling, and mobile foundation solutions into challenging Deccan basalt strata across Maharashtra.
+                To guarantee structural stability from the bedrock up, GJ Buildcon deploys integrated deep foundation piling as a supporting capability. Cast-in-situ bored piling, auger drilling, and mobile units anchor superstructures directly into Deccan basalt without vendor friction.
               </p>
 
               {/* Methodologies Architectural List */}
@@ -313,7 +313,7 @@ export const DisciplinesDiptychSection: React.FC = () => {
               {/* Action Link */}
               <div className="mt-6 flex items-center justify-between">
                 <Link
-                  href="/capabilities"
+                  href="/services-projects#piling-augur"
                   className="group inline-flex items-center gap-2 font-sans text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#FFFFFF] hover:text-[#C2A284] transition-colors"
                 >
                   <span className="relative">
@@ -329,6 +329,23 @@ export const DisciplinesDiptychSection: React.FC = () => {
             </div>
           </div>
 
+        </div>
+
+        {/* Global Bottom CTA for Services */}
+        <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/services-projects"
+            className="inline-flex items-center gap-2 rounded-full border border-[#FFFFFF] bg-[#FFFFFF] px-8 py-3.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#12100E] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 shadow-md"
+          >
+            <span>Explore Our Services</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-full border border-[#2D2622] bg-[#181512] px-8 py-3.5 font-sans text-xs uppercase tracking-wider font-semibold text-[#FFFFFF] hover:border-[#C2A284] hover:bg-[#1F1B17] transition-all duration-300"
+          >
+            <span>Consult Our Engineering Team</span>
+          </Link>
         </div>
 
       </div>

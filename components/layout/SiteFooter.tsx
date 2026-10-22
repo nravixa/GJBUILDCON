@@ -79,7 +79,7 @@ export const SiteFooter: React.FC = () => {
             <ul className="space-y-3.5 font-sans text-xs tracking-wider uppercase text-[#A89F95]">
               <li>
                 <Link
-                  href="/capabilities#civil-residential"
+                  href="/services-projects#civil-residential"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Residential Structural Works
@@ -87,7 +87,7 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/capabilities#civil-commercial"
+                  href="/services-projects#civil-commercial"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Commercial &amp; Corporate Floorplates
@@ -95,7 +95,7 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/capabilities#civil-institutional"
+                  href="/services-projects#civil-institutional"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Institutional &amp; Healthcare Campuses
@@ -103,7 +103,7 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/capabilities#piling-augur"
+                  href="/services-projects#piling-augur"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Rotary Augur Piling (CFA / Large Dia)
@@ -111,7 +111,7 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/capabilities#piling-tripod"
+                  href="/services-projects#piling-tripod"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Tripod Bored Cast-In-Situ Piling
@@ -119,7 +119,7 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/capabilities#piling-tractor"
+                  href="/services-projects#piling-tractor"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Urban Infill &amp; Tractor Piling Units
@@ -270,39 +270,39 @@ export const SiteFooter: React.FC = () => {
             <ul className="space-y-3.5 font-sans text-xs tracking-wider uppercase text-[#A89F95]">
               <li>
                 <Link
-                  href="/#scale"
+                  href="/about"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
-                  Operational Scale Ledger
+                  About Us &amp; Heritage Timeline
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#machinery"
+                  href="/services-projects"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
-                  Heavy Machinery Fleet (MAIT / SANY)
+                  Our Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#heritage"
+                  href="/services-projects#projects"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
-                  Heritage Timeline (2008–2025)
+                  Completed Projects &amp; Gallery
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#projects"
+                  href="/why-choose-us"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
-                  Pune Regional Footprint
+                  Why Choose Us (6 Pillars)
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#enquiry"
+                  href="/contact"
                   className="hover:text-[#DDB983] transition-colors duration-300 block py-0.5"
                 >
                   Executive Enquiry Terminal
@@ -391,28 +391,28 @@ export const SiteFooter: React.FC = () => {
           {/* Center: Legal & Specification Links */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C5BCB3] font-medium">
             <Link
-              href="/#scale"
+              href="/about"
               className="hover:text-[#DDB983] underline underline-offset-4 decoration-[#3E434D] hover:decoration-[#DDB983] transition-all"
             >
-              Audited Scale
+              About Us
             </Link>
             <Link
-              href="/#machinery"
+              href="/services-projects"
               className="hover:text-[#DDB983] underline underline-offset-4 decoration-[#3E434D] hover:decoration-[#DDB983] transition-all"
             >
-              Fleet Specs
+              Our Services
             </Link>
             <Link
-              href="/capabilities"
+              href="/why-choose-us"
               className="hover:text-[#DDB983] underline underline-offset-4 decoration-[#3E434D] hover:decoration-[#DDB983] transition-all"
             >
-              Capabilities
+              Why Choose Us
             </Link>
             <Link
-              href="/#heritage"
+              href="/contact"
               className="hover:text-[#DDB983] underline underline-offset-4 decoration-[#3E434D] hover:decoration-[#DDB983] transition-all"
             >
-              Corporate Heritage
+              Contact Us
             </Link>
           </div>
 

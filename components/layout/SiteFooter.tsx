@@ -381,7 +381,7 @@ export const SiteFooter: React.FC = () => {
           {/* Left: Copyright & Coordinates */}
           <div className="text-center lg:text-left space-y-1">
             <p className="text-[#C5BCB3]">
-              &copy; 2026 {companyData.legalName}. All rights reserved.
+              &copy; 2026 NRAVIXA. All rights reserved.
             </p>
             <p className="text-xs text-[#8E929C] tracking-widest font-sans font-medium">
               PUNE, MAHARASHTRA // 18.5986&deg; N, 73.7978&deg; E
@@ -418,9 +418,6 @@ export const SiteFooter: React.FC = () => {
 
           {/* Right: Pitch Colophon & Top Navigation */}
           <div className="flex items-center gap-4 text-center lg:text-right">
-            <span className="font-sans font-semibold border border-[#262930] bg-[#14161B] px-3 py-1.5 text-xs text-[#C5BCB3] tracking-wider">
-              DEMO // REDESIGN BY NRAVIXA
-            </span>
             <a
               href="#site-header"
               className="font-sans font-semibold inline-flex items-center gap-1 text-[#DDB983] hover:text-[#FFFFFF] transition-colors text-xs tracking-widest"

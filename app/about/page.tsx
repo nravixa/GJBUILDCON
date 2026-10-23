@@ -46,9 +46,9 @@ const historicalTimeline = [
   {
     year: "2015",
     phase: "PHASE 02 // CIVIL EXPANSION",
-    title: "Establishment of Aditya Construction",
+    title: "Civil Project Leadership at Aditya Construction",
     description:
-      "Founded Aditya Construction in Pune to provide turnkey civil contracting for residential towers, commercial complexes, and healthcare campuses with uncompromising schedule control.",
+      "Worked with Aditya Construction in Pune, delivering turnkey civil contracting for residential towers, commercial complexes, and healthcare campuses with uncompromising schedule control.",
     tag: "Turnkey Civil Growth",
   },
   {

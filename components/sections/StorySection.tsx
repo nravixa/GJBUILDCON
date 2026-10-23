@@ -28,9 +28,9 @@ export const StorySection: React.FC = () => {
     {
       year: "2015",
       stage: "STAGE // 02",
-      title: "Establishment of Aditya Construction",
+      title: "Civil Leadership at Aditya Construction",
       description:
-        "Founded Aditya Construction in Pune, delivering high-density residential societies and commercial civil contracts with zero-tolerance structural execution.",
+        "Worked with Aditya Construction in Pune, delivering turnkey civil contracting and infrastructure execution for high-density residential societies and commercial developments.",
       focus: "Turnkey Civil Growth",
     },
     {
